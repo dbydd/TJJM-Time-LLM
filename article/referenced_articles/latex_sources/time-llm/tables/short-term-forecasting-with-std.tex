@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\captionsetup{font=small} 
+  \caption{Standard deviations of our \method and the second-best method (N-HiTS) on M4 datasets for short-term forecasting.}
+  \label{tab:errorbar_short}
+  % \vskip 0.05in
+  \centering
+  \begin{threeparttable}
+  \begin{small}
+  \scalebox{0.99}{
+  \renewcommand{\multirowsetup}{\centering}
+  \setlength{\tabcolsep}{2pt}
+  \begin{tabular}{l|ccc|ccc}
+    \toprule
+    Model & \multicolumn{3}{c|}{\method{}} & \multicolumn{3}{c}{N-HiTS \citeyearpar{challu2022nhits}} \\
+    \cmidrule(lr){0-1}\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+    Dataset & SMAPE & MAPE & OWA & SMAPE & MAPE & OWA \\
+    \midrule
+    Yearly & \scalebox{0.9}{$13.419 \pm 0.117$} &\scalebox{0.9}{$3.005 \pm 0.011$}  & \scalebox{0.9}{$0.789 \pm 0.003$} & \scalebox{0.9}{$13.422 \pm 0.009$}	 & \scalebox{0.9}{$3.056 \pm 0.017$} & \scalebox{0.9}{$0.795 \pm 0.010$}\\
+    Quarterly & \scalebox{0.9}{$10.110 \pm 0.107$} & \scalebox{0.9}{$1.178 \pm 0.009$} & \scalebox{0.9}{$0.889 \pm 0.007$} &\scalebox{0.9}{$10.185 \pm 0.107$}  & \scalebox{0.9}{$1.180 \pm 0.007$} &\scalebox{0.9}{$0.893 \pm 0.001$} \\
+    Monthly &\scalebox{0.9}{$12.980 \pm 0.102$}  &\scalebox{0.9}{$0.963 \pm 0.005$}  & \scalebox{0.9}{$0.903 \pm 0.001$} & \scalebox{0.9}{$13.059 \pm 0.101$}	 & \scalebox{0.9}{$1.013 \pm 0.007$} & \scalebox{0.9}{$0.929 \pm 0.005$}\\
+    Others & \scalebox{0.9}{$4.795 \pm 0.117$} & \scalebox{0.9}{$3.178 \pm 0.012$} & \scalebox{0.9}{$1.006 \pm 0.009$} &\scalebox{0.9}{$4.711 \pm 0.117$} & \scalebox{0.9}{$3.054 \pm 0.011$} & \scalebox{0.9}{$0.997 \pm 0.012$}\\
+    Averaged & \scalebox{0.9}{$11.983 \pm 0.011$} & \scalebox{0.9}{$1.595 \pm 0.021$} & \scalebox{0.9}{$0.859 \pm 0.002$} &\scalebox{0.9}{$12.035 \pm 0.111$}	 & \scalebox{0.9}{$1.625 \pm 0.012$} & \scalebox{0.9}{$0.869 \pm 0.005$} \\
+    \bottomrule
+  \end{tabular}
+  }
+    \end{small}
+  \end{threeparttable}
+\end{table}

@@ -1,0 +1,76 @@
+\begin{table}[h!]
+\begin{center}
+\captionsetup{font=small} 
+\caption{\revision{Full zero-shot learning results on ETT datasets. A lower value indicates better performance. \boldres{Red}: the best, \secondres{Blue}: the second best.}}
+\label{tab:zero-shot-forecasting}
+\begin{small}
+\scalebox{0.75}{
+\setlength\tabcolsep{3pt}
+\begin{tabular}{c|c|cc|cc|cc|cc|cc|cc|cc}
+\toprule
+\multicolumn{2}{c|}{Methods}&\multicolumn{2}{c|}{\method}&\multicolumn{2}{c|}{\revision{LLMTime}}&\multicolumn{2}{c|}{GPT4TS}&\multicolumn{2}{c|}{DLinear}&\multicolumn{2}{c|}{PatchTST}&\multicolumn{2}{c|}{TimesNet}&\multicolumn{2}{c}{Autoformer}\\
+\midrule
+\multicolumn{2}{c|}{Metric} & MSE & MAE & \revision{MSE} & \revision{MAE} & MSE & MAE & MSE & MAE & MSE & MAE& MSE & MAE & MSE & MAE \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTh1$} $\rightarrow$ \rotatebox{0}{$ETTh2$}} & 
+96  &\boldres{0.279} & \boldres{0.337} &0.510 &0.576 & 0.335 & 0.374 & 0.347 & 0.400 & \secondres{0.304} & \secondres{0.350} & 0.358 & 0.387 & 0.469 & 0.486 \\
+& 192 & \boldres{0.351} & \boldres{0.374} &0.523 &0.586 & 0.412 & 0.417 & 0.447 & 0.460 & \secondres{0.386} & \secondres{0.400} & 0.427 & 0.429 & 0.634 & 0.567 \\
+& 336 & \boldres{0.388} & \boldres{0.415} &0.640 &0.637 & 0.441 & 0.444 & 0.515 & 0.505 & \secondres{0.414} & \secondres{0.428} & 0.449 & 0.451 & 0.655 & 0.588 \\
+& 720 & \boldres{0.391} & \boldres{0.420} &2.296 &1.034 & 0.438 & 0.452 & 0.665 & 0.589 & \secondres{0.419} & \secondres{0.443} & 0.448 & 0.458 & 0.570 & 0.549 \\
+&Avg & \boldres{0.353} & \boldres{0.387} &0.992 &0.708 & 0.406 & 0.422 & 0.493 & 0.488 & \secondres{0.380} & \secondres{0.405} & 0.421 & 0.431 & 0.582 & 0.548 \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTh1 $} $\rightarrow$ \rotatebox{0}{$ETTm2 $}}
+& 96  & \boldres{0.189} & \boldres{0.293} &0.646&0.563& 0.236 & 0.315 & 0.255 & 0.357 & \secondres{0.215} & \secondres{0.304} & 0.239 & 0.313 & 0.352 & 0.432 \\
+& 192 & \boldres{0.237} & \boldres{0.312} &0.934&0.654& 0.287 & 0.342 & 0.338 & 0.413 & \secondres{0.275} & \secondres{0.339} & 0.291 & 0.342 & 0.413 & 0.460 \\
+& 336 & \boldres{0.291} & \boldres{0.365} &1.157&0.728& 0.341 & 0.374 & 0.425 & 0.465 & \secondres{0.334} & \secondres{0.373} & 0.342 & 0.371 & 0.465 & 0.489 \\
+& 720 & \boldres{0.372} & \boldres{0.390} &4.730 &1.531 & 0.435 & \secondres{0.422} & 0.640 & 0.573 & \secondres{0.431} & 0.424 & 0.434 & 0.419 & 0.599 & 0.551 \\
+&Avg & \boldres{0.273} & \boldres{0.340} &1.867 &0.869 & 0.325 & 0.363 & 0.415 & 0.452 & \secondres{0.314} & \secondres{0.360} & 0.327 & 0.361 & 0.457 & 0.483 \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTh2 $} $\rightarrow$ \rotatebox{0}{$ETTh1 $}}
+& 96  & \boldres{0.450} & \boldres{0.452} &1.130 &0.777 & 0.732 & 0.577 & 0.689 & 0.555 & \secondres{0.485} & \secondres{0.465} & 0.848 & 0.601 & 0.693 & 0.569 \\
+& 192 & \boldres{0.465} & \boldres{0.461} &1.242 &0.820 & 0.758 & 0.559 & 0.707 & 0.568 &\secondres{0.565} & \secondres{0.509} & 0.860 & 0.610 & 0.760 & 0.601 \\
+& 336 & \boldres{0.501} & \boldres{0.482} &1.328 &0.864 & 0.759 & 0.578 & 0.710 & 0.577 & \secondres{0.581} & \secondres{0.515} & 0.867 & 0.626 & 0.781 & 0.619 \\
+& 720 & \boldres{0.501} & \boldres{0.502} &4.145 &1.461 & 0.781 & 0.597 & 0.704 & 0.596 & \secondres{0.628} & \secondres{0.561} & 0.887 & 0.648 & 0.796 & 0.644 \\
+&Avg & \boldres{0.479} & \boldres{0.474} &1.961 &0.981 & 0.757 & 0.578 & 0.703 & 0.574 & \secondres{0.565} & \secondres{0.513} & 0.865 & 0.621 & 0.757 & 0.608 \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTh2 $} $\rightarrow$ \rotatebox{0}{$ETTm2 $}}
+& 96  & \boldres{0.174} & \boldres{0.276} &0.646&0.563& 0.253 & 0.329 & 0.240 & 0.336 & \secondres{0.226} & \secondres{0.309} & 0.248 & 0.324 & 0.263 & 0.352 \\
+& 192 & \boldres{0.233} & \boldres{0.315} &0.934&0.654& 0.293 & 0.346 & 0.295 & 0.369 & \secondres{0.289} & \secondres{0.345} & 0.296 & 0.352 & 0.326 & 0.389 \\
+& 336 & \boldres{0.291} & \boldres{0.337} &1.157&0.728& 0.347 & \secondres{0.376} & \secondres{0.345} & 0.397 & 0.348 & 0.379 & 0.353 & 0.383 & 0.387 & 0.426 \\
+& 720 & \boldres{0.392} & \boldres{0.417} &4.730 &1.531 & 0.446 & 0.429 & \secondres{0.432} & 0.442 &  0.439 & 0.427 & 0.471 & 0.446 & 0.487 & 0.478 \\
+&Avg & \boldres{0.272} & \boldres{0.341} &1.867 &0.869 & 0.335 & 0.370 & 0.328 & 0.386 & \secondres{0.325} & \secondres{0.365} & 0.342 & 0.376 & 0.366 & 0.411 \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTm1 $} $\rightarrow$ \rotatebox{0}{$ETTh2 $}}
+& 96  & \boldres{0.321} & \boldres{0.369} &0.510 &0.576 & \secondres{0.353} & 0.392 & 0.365 & 0.415 & 0.354 & \secondres{0.385} & 0.377 & 0.407 & 0.435 & 0.470 \\
+& 192 & \boldres{0.389} & \boldres{0.410} &0.523 &0.586 & \secondres{0.443} & 0.437 & 0.454 & 0.462 & 0.447 & \secondres{0.434} & 0.471 & 0.453 & 0.495 & 0.489 \\
+& 336 & \boldres{0.408} & \boldres{0.433} &0.640 &0.637 & \secondres{0.469} & \secondres{0.461} & 0.496 & 0.494 & 0.481 & 0.463 & 0.472 & 0.484 & 0.470 & 0.472 \\
+& 720 & \boldres{0.406} & \boldres{0.436} &2.296 &1.034 & \secondres{0.466} & \secondres{0.468} & 0.541 & 0.529 & 0.474 & 0.471 & 0.495 & 0.482 & 0.480 & 0.485 \\
+&Avg & \boldres{0.381} & \boldres{0.412} &0.992 &0.708 & \secondres{0.433} & 0.439 & 0.464 & 0.475 & 0.439 & \secondres{0.438} & 0.457 & 0.454 & 0.470 & 0.479 \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTm1 $} $\rightarrow$ \rotatebox{0}{$ETTm2 $}}
+& 96  & \boldres{0.169} & \boldres{0.257} &0.646&0.563& 0.217 & 0.294 & 0.221 & 0.314 & \secondres{0.195} & \secondres{0.271} & 0.222 & 0.295 & 0.385 & 0.457 \\
+& 192 & \boldres{0.227} & \boldres{0.318} &0.934&0.654& 0.277 & 0.327 & 0.286 & 0.359 & \secondres{0.258} & \secondres{0.311} & 0.288 & 0.337 & 0.433 & 0.469 \\
+& 336 & \boldres{0.290} & \boldres{0.338} &1.157&0.728& 0.331 & 0.360 & 0.357 & 0.406 & \secondres{0.317} & \secondres{0.348} & 0.341 & 0.367 & 0.476 & 0.477 \\
+& 720 & \boldres{0.375} & \boldres{0.367} &4.730 &1.531 & 0.429 & 0.413 & 0.476 & 0.476 & \secondres{0.416} & \secondres{0.404} & 0.436 & 0.418 & 0.582 & 0.535 \\
+&Avg & \boldres{0.268} & \boldres{0.320} &1.867 &0.869 & 0.313 & 0.348 & 0.335 & 0.389 & \secondres{0.296} & \secondres{0.334} & 0.322 & 0.354 & 0.469 & 0.484 \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTm2 $} $\rightarrow$ \rotatebox{0}{$ETTh2 $}}
+& 96  & \boldres{0.298} & \boldres{0.356} &0.510 &0.576 & 0.360 & 0.401 & 0.333 & 0.391 & \secondres{0.327} & \secondres{0.367} & 0.360 &  0.401 & 0.353 & 0.393 \\
+& 192 & \boldres{0.359} & \boldres{0.397} &0.523 &0.586 & 0.434 & 0.437 & 0.441 & 0.456 & \secondres{0.411} & \secondres{0.418} & 0.434 & 0.437 & 0.432 & 0.437 \\
+& 336 & \boldres{0.367} & \boldres{0.412} &0.640 &0.637 & 0.460 & 0.459 & 0.505 & 0.503 & \secondres{0.439} & \secondres{0.447} & 0.460 & 0.459 & 0.452 & 0.459 \\
+& 720 & \boldres{0.393} & \boldres{0.434} &2.296 &1.034 & 0.485 & 0.477 & 0.543 & 0.534 & 0.459 & 0.470 & 0.485 & 0.477 & \secondres{0.453} & \secondres{0.467} \\
+&Avg & \boldres{0.354} & \boldres{0.400} &0.992 &0.708 & 0.435 & 0.443 & 0.455 & 0.471 & 0.409 & 0.425 & 0.435 & 0.443 & 0.423 & 0.439 \\
+\midrule
+\multirow{5}{*}{\rotatebox{0}{$ETTm2 $} $\rightarrow$ \rotatebox{0}{$ETTm1 $}}
+& 96  & \boldres{0.359} & \boldres{0.397} &1.179& 0.781& 0.747 & 0.558 & 0.570 & 0.490 & \secondres{0.491} & \secondres{0.437} & 0.747 & 0.558 & 0.735 & 0.576 \\
+& 192 & \boldres{0.390} & \boldres{0.420} &1.327&0.846& 0.781 & 0.560 & 0.590 & 0.506  & \secondres{0.530} & \secondres{0.470} & 0.781 & 0.560 & 0.753 & 0.586 \\
+& 336 & \boldres{0.421} & \boldres{0.445} &1.478&0.902& 0.778 & 0.578 & 0.706 & 0.567  & \secondres{0.565} & \secondres{0.497} & 0.778 & 0.578 & 0.750 & 0.593 \\
+& 720 & \boldres{0.487} & \boldres{0.488} &3.749 &1.408 & 0.769 & 0.573 & 0.731 & 0.584 & \secondres{0.686} & \secondres{0.565} & 0.769 & 0.573 & 0.782 & 0.609 \\
+&Avg & \boldres{0.414} & \boldres{0.438} &1.933 &0.984 & 0.769 & 0.567 & 0.649 & 0.537 & \secondres{0.568} & \secondres{0.492} & 0.769 & 0.567 & 0.755 & 0.591 \\
+\bottomrule
+
+\end{tabular}
+}
+\end{small}
+\end{center}
+\end{table}

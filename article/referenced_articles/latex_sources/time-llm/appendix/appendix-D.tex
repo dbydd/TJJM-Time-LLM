@@ -1,0 +1,23 @@
+\vspace{-5mm}
+\revision{\section{Long-term and Short-term Forecasting}\label{appx:short-term}}
+\vspace{-10mm}
+\revision{\subsection{Long-term Forecasting}}
+\revision{
+By solely reprogramming the smallest Llama model while keeping it intact, \method attains SOTA performance in \textbf{36} out of 40 instances across eight time series benchmarks. This underscores the considerable potential of LLMs as robust and reliable time series forecasters.
+Furthermore, we benchmark the proposed method against other well-established baselines in \shortautoref{tab:long-term-forecasting-full-additional-baselines}. This comparison includes three notable statistical methods (AutoARIMA, AutoTheta, and AutoETS) \citep{herzen2022darts} and two recent time series models, N-HiTS~\citep{challu2023nhits} and N-BEATS~\citep{oreshkin2019n}. Remarkably, \method secures SOTA performance across all cases, surpassing the second-best results by significant margins of over \textbf{22\%} and \textbf{16\%} in terms of MSE and MAE.
+}
+
+\input{tables/long-term-forecasting-full-results}
+\input{tables/long-term-forecasting-additional-baselines}
+
+\vspace{-10mm}
+\revision{\subsection{Short-term Forecasting}}
+
+\input{tables/short-term-forecasting}
+\input{tables/short-term-forecasting-additional-M3}
+
+Our complete results on short-term forecasting are presented in \shortautoref{tab:short-term-forecasting}. \method consistently outperforms the majority of baseline models in most cases. Notably, we surpass GPT4TS by a large margin (e.g., \textbf{8.7\%} overall, \textbf{13.4\%} on M4-Yearly, and an average of \textbf{21.5\%} on M4-Hourly, M4-Daily, and M4-Weekly), as well as TimesNet (e.g., \textbf{10\%} overall, \textbf{14.1\%} on M4-Yearly, and an average of \textbf{30.1\%} on M4-Hourly, M4-Daily, and M4-Weekly). Compared to the recent state-of-the-art forecasting models, N-HiTS and PatchTST, \method exhibits comparable or superior performances without any parameter updates on the backbone LLM.
+
+\revision{
+In addition, we conduct a comparative analysis between \method and the top-performing models on the M3-Quarterly dataset, with the findings presented in \shortautoref{tab:short-term-forecasting-M3}. We provide additional metrics, namely MRAE and MAPE, alongside the default SMAPE used in the M3 competition. On this dataset, \method attains on-par performance compared to TimesNet and PatchTST, outperforming GPT4TS by substantial margins, achieving reductions of over \textbf{23\%}, \textbf{35\%}, and \textbf{26\%} in SMAPE, MRAE, and MAPE, respectively.
+}

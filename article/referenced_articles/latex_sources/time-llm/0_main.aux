@@ -1,0 +1,331 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{jin2023survey}
+\citation{leonard2001promotional}
+\citation{li2022demand}
+\citation{liu2023sadi}
+\citation{schneider1974climate}
+\citation{brown2020language}
+\citation{openai2023gpt4}
+\citation{touvron2023llama}
+\citation{jin2023large}
+\citation{brown2020language}
+\citation{mirchandani2023large,wang2023enhancing,chu2023leveraging}
+\citation{ma2023leveraging}
+\citation{zhou2023ptse}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{box2015time}
+\citation{hochreiter1997long}
+\citation{bai2018empirical}
+\citation{wen2023transformers}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\citation{devlin2018bert,brown2020language,touvron2023llama}
+\citation{fawaz2018transfer}
+\citation{zhang2022self,deldari2022beyond,zhang2023self}
+\citation{tang2022domain}
+\citation{yin2023survey}
+\citation{chen2022model}
+\citation{yang2021voice2series}
+\citation{chang2023llm4ts}
+\citation{zhou2023one}
+\citation{touvron2023llama}
+\citation{radford2019language}
+\citation{nie2022time}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic illustration of reprogramming large language models (LLMs) in comparison of \textbf  {(a)} task-specific learning and \textbf  {(b)} model fine-tuning. Our proposal investigates and demonstrates \textbf  {(c)} how to effectively reprogram open-sourced LLMs as powerful time series learners where well-developed time series pre-trained models are not readily available. }}{3}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:schematic}{{1}{3}{Schematic illustration of reprogramming large language models (LLMs) in comparison of \textbf {(a)} task-specific learning and \textbf {(b)} model fine-tuning. Our proposal investigates and demonstrates \textbf {(c)} how to effectively reprogram open-sourced LLMs as powerful time series learners where well-developed time series pre-trained models are not readily available}{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}{section.3}\protected@file@percent }
+\citation{kim2021reversible}
+\citation{nie2022time}
+\citation{misra2023reprogramming}
+\citation{yang2021voice2series}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  The model framework of \textsc  {Time-LLM}\xspace  . Given an input time series, we first tokenize and embed it via \tikzmarknode [mycircled,red]{a1}{1} patching along with a \tikzmarknode [mycircled,red]{a2}{2} customized embedding layer. \tikzmarknode [mycircled,red]{a3}{3} {\textcolor {black}{These patch embeddings are then reprogrammed with condensed text prototypes to align two modalities.}} To augment the LLM's reasoning ability, \tikzmarknode [mycircled,red]{a4}{4} additional prompt prefixes are added to the input to direct the transformation of input patches. \tikzmarknode [mycircled,red]{a5}{5} The output patches from the LLM are projected to generate the forecasts. }}{4}{figure.caption.2}\protected@file@percent }
+\savepointas{a1}{pgfid6}{0pt}{0pt}
+\savepicturepage{pgfid6}{4}
+\pgfsyspdfmark {pgfid6}{10841684}{30138768}
+\savepointas{a2}{pgfid7}{0pt}{0pt}
+\savepicturepage{pgfid7}{4}
+\pgfsyspdfmark {pgfid7}{17476442}{30138768}
+\savepointas{a3}{pgfid8}{0pt}{0pt}
+\savepicturepage{pgfid8}{4}
+\pgfsyspdfmark {pgfid8}{26175264}{30138768}
+\savepointas{a4}{pgfid9}{0pt}{0pt}
+\savepicturepage{pgfid9}{4}
+\pgfsyspdfmark {pgfid9}{14082468}{28696976}
+\savepointas{a5}{pgfid10}{0pt}{0pt}
+\savepicturepage{pgfid10}{4}
+\pgfsyspdfmark {pgfid10}{13832954}{27976080}
+\newlabel{fig:framework}{{2}{4}{The model framework of \method . Given an input time series, we first tokenize and embed it via \tikzmarknode [mycircled,red]{a1}{1} patching along with a \tikzmarknode [mycircled,red]{a2}{2} customized embedding layer. \tikzmarknode [mycircled,red]{a3}{3} \revision {These patch embeddings are then reprogrammed with condensed text prototypes to align two modalities.} To augment the LLM's reasoning ability, \tikzmarknode [mycircled,red]{a4}{4} additional prompt prefixes are added to the input to direct the transformation of input patches. \tikzmarknode [mycircled,red]{a5}{5} The output patches from the LLM are projected to generate the forecasts}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Model Structure}{4}{subsection.3.1}\protected@file@percent }
+\citation{yin2023survey}
+\citation{xue2022prompt}
+\citation{tsimpoukelli2021multimodal}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Illustration of {\textcolor {black}{\textbf  {(a)} patch reprogramming}} and \textbf  {(b)} Patch-as-Prefix versus Prompt-as-Prefix.}}{5}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:framework_details}{{3}{5}{Illustration of \revision {\textbf {(a)} patch reprogramming} and \textbf {(b)} Patch-as-Prefix versus Prompt-as-Prefix}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Prompt example. \textcolor {blue}{$<>$} and \textcolor {orange}{$<>$} are task-specific configurations and calculated input statistics.}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:prompt_example}{{4}{5}{Prompt example. \textcolor {blue}{$<>$} and \textcolor {orange}{$<>$} are task-specific configurations and calculated input statistics}{figure.caption.4}{}}
+\citation{zhou2023one}
+\citation{wu2022timesnet}
+\citation{touvron2023llama}
+\citation{zhou2023one}
+\citation{nie2022time}
+\citation{woo2022etsformer}
+\citation{liu2022non}
+\citation{zhou2022fedformer}
+\citation{wu2021autoformer}
+\citation{zhou2021informer}
+\citation{kitaev2020reformer}
+\citation{zhou2023one}
+\citation{gruver2023large}
+\citation{zeng2023transformers}
+\citation{wu2022timesnet}
+\citation{zhang2022less}
+\citation{challu2023nhits}
+\citation{oreshkin2019n}
+\citation{wu2022timesnet}
+\citation{zhou2023one}
+\citation{zhou2023one}
+\citation{zeng2023transformers}
+\citation{nie2022time}
+\citation{wu2022timesnet}
+\citation{zhou2022fedformer}
+\citation{wu2021autoformer}
+\citation{liu2022non}
+\citation{woo2022etsformer}
+\citation{zhang2022less}
+\citation{zhou2021informer}
+\citation{kitaev2020reformer}
+\citation{zhou2023one}
+\citation{wu2022timesnet}
+\citation{nie2022time}
+\citation{challu2023nhits}
+\citation{oreshkin2019n}
+\citation{woo2022etsformer}
+\citation{zhang2022less}
+\citation{zeng2023transformers}
+\citation{zhou2022fedformer}
+\citation{liu2022non}
+\citation{wu2021autoformer}
+\citation{zhou2021informer}
+\citation{kitaev2020reformer}
+\citation{makridakis2018m4}
+\citation{challu2023nhits}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Main Results}{6}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Long-term Forecasting}{6}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:long-term-forecasting}{{4.1}{6}{Long-term Forecasting}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Short-term Forecasting}{6}{subsection.4.2}\protected@file@percent }
+\citation{liu2023large}
+\citation{zhou2023one}
+\citation{zhou2023one}
+\citation{zeng2023transformers}
+\citation{nie2022time}
+\citation{wu2022timesnet}
+\citation{zhou2022fedformer}
+\citation{wu2021autoformer}
+\citation{liu2022non}
+\citation{woo2022etsformer}
+\citation{zhang2022less}
+\citation{zhou2021informer}
+\citation{kitaev2020reformer}
+\citation{zhou2023one}
+\citation{zeng2023transformers}
+\citation{nie2022time}
+\citation{wu2022timesnet}
+\citation{zhou2022fedformer}
+\citation{wu2021autoformer}
+\citation{liu2022non}
+\citation{woo2022etsformer}
+\citation{zhang2022less}
+\citation{zhou2021informer}
+\citation{kitaev2020reformer}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces {\textcolor {black}{Long-term forecasting results. All results are averaged from four different forecasting horizons: $H \in \{24, 36, 48, 60\}$ for ILI and $\{96, 192, 336, 720\}$ for the others. A lower value indicates better performance. {{\textbf  {\textcolor {red}{Red}}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best. Our full results are in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {appx:short-term}\endgroup .}}}}{7}{table.caption.5}\protected@file@percent }
+\newlabel{tab:long-term-forecasting}{{1}{7}{\revision {Long-term forecasting results. All results are averaged from four different forecasting horizons: $H \in \{24, 36, 48, 60\}$ for ILI and $\{96, 192, 336, 720\}$ for the others. A lower value indicates better performance. {\boldres {Red}}: the best, \secondres {Blue}: the second best. Our full results are in \shortautoref {appx:short-term}.}}{table.caption.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Short-term time series forecasting results on M4. The forecasting horizons are in [6, 48] and the three rows provided are weighted averaged from all datasets under different sampling intervals. A lower value indicates better performance. {\textbf  {\textcolor {red}{Red}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best. {\textcolor {black}{More results are in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {appx:short-term}\endgroup .}} }}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:short-term-forecasting-brief}{{2}{7}{Short-term time series forecasting results on M4. The forecasting horizons are in [6, 48] and the three rows provided are weighted averaged from all datasets under different sampling intervals. A lower value indicates better performance. \boldres {Red}: the best, \secondres {Blue}: the second best. \revision {More results are in \shortautoref {appx:short-term}.}}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Few-shot Forecasting}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces {\textcolor {black}{Few-shot learning on 10\% training data. We use the same protocol in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {tab:long-term-forecasting}\endgroup . All results are averaged from four different forecasting horizons: $H \in \{96, 192, 336, 720\}$. Our full results are in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {appx:zero-shot}\endgroup .}}}}{7}{table.caption.7}\protected@file@percent }
+\newlabel{tab:few-shot-forecasting-10per}{{3}{7}{\revision {Few-shot learning on 10\% training data. We use the same protocol in \shortautoref {tab:long-term-forecasting}. All results are averaged from four different forecasting horizons: $H \in \{96, 192, 336, 720\}$. Our full results are in \shortautoref {appx:zero-shot}.}}{table.caption.7}{}}
+\citation{zhou2023one}
+\citation{gruver2023large}
+\citation{zeng2023transformers}
+\citation{nie2022time}
+\citation{wu2022timesnet}
+\citation{kojima2205large}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces {\textcolor {black}{Few-shot learning on 5\% training data. We use the same protocol in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {tab:long-term-forecasting}\endgroup . All results are averaged from four different forecasting horizons: $H \in \{96, 192, 336, 720\}$. Our full results are in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {appx:zero-shot}\endgroup .}}}}{8}{table.caption.8}\protected@file@percent }
+\newlabel{tab:few-shot-forecasting-5per}{{4}{8}{\revision {Few-shot learning on 5\% training data. We use the same protocol in \shortautoref {tab:long-term-forecasting}. All results are averaged from four different forecasting horizons: $H \in \{96, 192, 336, 720\}$. Our full results are in \shortautoref {appx:zero-shot}.}}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Zero-shot Forecasting}{8}{subsection.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces {\textcolor {black}{Zero-shot learning results. {\textbf  {\textcolor {red}{Red}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best. \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {appx:zero-shot}\endgroup  shows our detailed results.}}}}{8}{table.caption.9}\protected@file@percent }
+\newlabel{tab:zero-shot-forecasting-brief}{{5}{8}{\revision {Zero-shot learning results. \boldres {Red}: the best, \secondres {Blue}: the second best. \shortautoref {appx:zero-shot} shows our detailed results.}}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Setups.}{8}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Model Analysis}{8}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:model_analysis}{{4.5}{8}{Model Analysis}{subsection.4.5}{}}
+\citation{dettmers2023qlora}
+\bibdata{reference}
+\bibcite{bai2018empirical}{{1}{2018}{{Bai et~al.}}{{Bai, Kolter, and Koltun}}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Ablations on ETTh1 and ETTm1 in predicting 96 and 192 steps ahead (MSE reported). {\textbf  {\textcolor {red}{Red}}}: the best. }}{9}{table.caption.11}\protected@file@percent }
+\newlabel{tab:ablations}{{6}{9}{Ablations on ETTh1 and ETTm1 in predicting 96 and 192 steps ahead (MSE reported). \boldres {Red}: the best}{table.caption.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Efficiency analysis of \textsc  {Time-LLM}\xspace  on ETTh1 in forecasting different steps ahead.}}{9}{table.caption.14}\protected@file@percent }
+\newlabel{tab:efficiency}{{7}{9}{Efficiency analysis of \method on ETTh1 in forecasting different steps ahead}{table.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A showcase of patch reprogramming.}}{9}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:reprogramming_showcase}{{5}{9}{A showcase of patch reprogramming}{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and Future Work}{9}{section.5}\protected@file@percent }
+\bibcite{box2015time}{{2}{2015}{{Box et~al.}}{{Box, Jenkins, Reinsel, and Ljung}}}
+\bibcite{brown2020language}{{3}{2020}{{Brown et~al.}}{{Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, et~al.}}}
+\bibcite{challu2022nhits}{{4}{2023{a}}{{Challu et~al.}}{{Challu, Olivares, Oreshkin, Garza, Mergenthaler, and Dubrawski}}}
+\bibcite{challu2023nhits}{{5}{2023{b}}{{Challu et~al.}}{{Challu, Olivares, Oreshkin, Ramirez, Canseco, and Dubrawski}}}
+\bibcite{chang2023llm4ts}{{6}{2023}{{Chang et~al.}}{{Chang, Peng, and Chen}}}
+\bibcite{chen2022model}{{7}{2022}{{Chen}}{{}}}
+\bibcite{chu2023leveraging}{{8}{2023}{{Chu et~al.}}{{Chu, Hao, Ouyang, Wang, Wang, Shen, Gu, Cui, Li, Xue, et~al.}}}
+\bibcite{deldari2022beyond}{{9}{2022}{{Deldari et~al.}}{{Deldari, Xue, Saeed, He, Smith, and Salim}}}
+\bibcite{dettmers2023qlora}{{10}{2023}{{Dettmers et~al.}}{{Dettmers, Pagnoni, Holtzman, and Zettlemoyer}}}
+\bibcite{devlin2018bert}{{11}{2018}{{Devlin et~al.}}{{Devlin, Chang, Lee, and Toutanova}}}
+\bibcite{fawaz2018transfer}{{12}{2018}{{Fawaz et~al.}}{{Fawaz, Forestier, Weber, Idoumghar, and Muller}}}
+\bibcite{gruver2023large}{{13}{2023}{{Gruver et~al.}}{{Gruver, Finzi, Qiu, and Wilson}}}
+\bibcite{herzen2022darts}{{14}{2022}{{Herzen et~al.}}{{Herzen, Lassig, Piazzetta, Neuer, Tafti, Raille, Van~Pottelbergh, Pasieka, Skrodzki, Huguenin, et~al.}}}
+\bibcite{hochreiter1997long}{{15}{1997}{{Hochreiter \& Schmidhuber}}{{Hochreiter and Schmidhuber}}}
+\bibcite{jin2023survey}{{16}{2023{a}}{{Jin et~al.}}{{Jin, Koh, Wen, Zambon, Alippi, Webb, King, and Pan}}}
+\bibcite{jin2023large}{{17}{2023{b}}{{Jin et~al.}}{{Jin, Wen, Liang, Zhang, Xue, Wang, Zhang, Wang, Chen, Li, et~al.}}}
+\bibcite{kim2021reversible}{{18}{2021}{{Kim et~al.}}{{Kim, Kim, Tae, Park, Choi, and Choo}}}
+\bibcite{KingmaB14adam}{{19}{2015}{{Kingma \& Ba}}{{Kingma and Ba}}}
+\bibcite{kitaev2020reformer}{{20}{2020}{{Kitaev et~al.}}{{Kitaev, Kaiser, and Levskaya}}}
+\bibcite{kojima2205large}{{21}{2022}{{Kojima et~al.}}{{Kojima, Gu, Reid, Matsuo, and Iwasawa}}}
+\bibcite{leonard2001promotional}{{22}{2001}{{Leonard}}{{}}}
+\bibcite{li2022demand}{{23}{2022}{{Li et~al.}}{{Li, Arnold, Down, Barty, Blake, Chiang, Courtney, Waito, Trifunov, and Heddle}}}
+\bibcite{liu2023sadi}{{24}{2023{a}}{{Liu et~al.}}{{Liu, Ma, Yang, Zhou, Xia, Wang, Wen, and Sun}}}
+\bibcite{liu2023large}{{25}{2023{b}}{{Liu et~al.}}{{Liu, McDuff, Kovacs, Galatzer-Levy, Sunshine, Zhan, Poh, Liao, Di~Achille, and Patel}}}
+\bibcite{liu2022non}{{26}{2022}{{Liu et~al.}}{{Liu, Wu, Wang, and Long}}}
+\bibcite{ma2023leveraging}{{27}{2023}{{Ma et~al.}}{{Ma, Wu, Zheng, Guo, Chen, Zhang, and Chen}}}
+\bibcite{makridakis2000m3}{{28}{2000}{{Makridakis \& Hibon}}{{Makridakis and Hibon}}}
+\bibcite{makridakis2018m4}{{29}{2018}{{Makridakis et~al.}}{{Makridakis, Spiliotis, and Assimakopoulos}}}
+\bibcite{melnyk2023reprogramming}{{30}{2023}{{Melnyk et~al.}}{{Melnyk, Chenthamarakshan, Chen, Das, Dhurandhar, Padhi, and Das}}}
+\bibcite{mirchandani2023large}{{31}{2023}{{Mirchandani et~al.}}{{Mirchandani, Xia, Florence, Driess, Arenas, Rao, Sadigh, Zeng, et~al.}}}
+\bibcite{misra2023reprogramming}{{32}{2023}{{Misra et~al.}}{{Misra, Goyal, Runwal, and Chen}}}
+\bibcite{nie2022time}{{33}{2023}{{Nie et~al.}}{{Nie, Nguyen, Sinthong, and Kalagnanam}}}
+\bibcite{openai2023gpt4}{{34}{2023}{{OpenAI}}{{}}}
+\bibcite{oreshkin2019n}{{35}{2020}{{Oreshkin et~al.}}{{Oreshkin, Carpov, Chapados, and Bengio}}}
+\bibcite{paszke2019pytorch}{{36}{2019}{{Paszke et~al.}}{{Paszke, Gross, Massa, Lerer, Bradbury, Chanan, Killeen, Lin, Gimelshein, Antiga, et~al.}}}
+\bibcite{radford2019language}{{37}{2019}{{Radford et~al.}}{{Radford, Wu, Child, Luan, Amodei, Sutskever, et~al.}}}
+\bibcite{schneider1974climate}{{38}{1974}{{Schneider \& Dickinson}}{{Schneider and Dickinson}}}
+\bibcite{tang2022domain}{{39}{2022}{{Tang et~al.}}{{Tang, Qu, Chow, Lam, Wong, and Ma}}}
+\bibcite{touvron2023llama}{{40}{2023}{{Touvron et~al.}}{{Touvron, Lavril, Izacard, Martinet, Lachaux, Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, et~al.}}}
+\bibcite{tsimpoukelli2021multimodal}{{41}{2021}{{Tsimpoukelli et~al.}}{{Tsimpoukelli, Menick, Cabi, Eslami, Vinyals, and Hill}}}
+\bibcite{vaswani2017attention}{{42}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{vinod2020reprogramming}{{43}{2020}{{Vinod et~al.}}{{Vinod, Chen, and Das}}}
+\bibcite{wang2023enhancing}{{44}{2023}{{Wang et~al.}}{{Wang, Chu, Ouyang, Wang, Hao, Shen, Gu, Xue, Zhang, Cui, et~al.}}}
+\bibcite{wen2023transformers}{{45}{2023}{{Wen et~al.}}{{Wen, Zhou, Zhang, Chen, Ma, Yan, and Sun}}}
+\bibcite{woo2022etsformer}{{46}{2022}{{Woo et~al.}}{{Woo, Liu, Sahoo, Kumar, and Hoi}}}
+\bibcite{wu2021autoformer}{{47}{2021}{{Wu et~al.}}{{Wu, Xu, Wang, and Long}}}
+\bibcite{wu2022timesnet}{{48}{2023}{{Wu et~al.}}{{Wu, Hu, Liu, Zhou, Wang, and Long}}}
+\bibcite{xue2022prompt}{{49}{2022}{{Xue \& Salim}}{{Xue and Salim}}}
+\bibcite{yang2021voice2series}{{50}{2021}{{Yang et~al.}}{{Yang, Tsai, and Chen}}}
+\bibcite{yin2023survey}{{51}{2023}{{Yin et~al.}}{{Yin, Fu, Zhao, Li, Sun, Xu, and Chen}}}
+\bibcite{zeng2023transformers}{{52}{2023}{{Zeng et~al.}}{{Zeng, Chen, Zhang, and Xu}}}
+\bibcite{zhang2023self}{{53}{2023}{{Zhang et~al.}}{{Zhang, Wen, Zhang, Cai, Jin, Liu, Zhang, Liang, Pang, Song, et~al.}}}
+\bibcite{zhang2022less}{{54}{2022{a}}{{Zhang et~al.}}{{Zhang, Zhang, Cao, Bian, Yi, Zheng, and Li}}}
+\bibcite{zhang2022self}{{55}{2022{b}}{{Zhang et~al.}}{{Zhang, Zhao, Tsiligkaridis, and Zitnik}}}
+\bibcite{zhou2021informer}{{56}{2021}{{Zhou et~al.}}{{Zhou, Zhang, Peng, Zhang, Li, Xiong, and Zhang}}}
+\bibcite{zhou2022fedformer}{{57}{2022}{{Zhou et~al.}}{{Zhou, Ma, Wen, Wang, Sun, and Jin}}}
+\bibcite{zhou2023one}{{58}{2023{a}}{{Zhou et~al.}}{{Zhou, Niu, Wang, Sun, and Jin}}}
+\bibcite{zhou2023ptse}{{59}{2023{b}}{{Zhou et~al.}}{{Zhou, Chu, Ruan, Jin, Huang, and Li}}}
+\bibstyle{iclr2024_conference}
+\citation{vaswani2017attention}
+\citation{nie2022time}
+\citation{woo2022etsformer}
+\citation{zhou2022fedformer}
+\citation{wu2021autoformer}
+\citation{chen2022model}
+\citation{yang2021voice2series}
+\citation{gruver2023large}
+\citation{vinod2020reprogramming}
+\citation{melnyk2023reprogramming}
+\citation{wu2022timesnet}
+\citation{touvron2023llama}
+\citation{paszke2019pytorch}
+\@writefile{toc}{\contentsline {section}{\numberline {A}More Related Work}{14}{appendix.A}\protected@file@percent }
+\newlabel{appx:related_work}{{A}{14}{More Related Work}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Experimental Details}{14}{appendix.B}\protected@file@percent }
+\newlabel{appx:experiment_details}{{B}{14}{Experimental Details}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Implementation}{14}{subsection.B.1}\protected@file@percent }
+\citation{nie2022time}
+\citation{zhou2021informer}
+\citation{wu2022timesnet}
+\citation{makridakis2018m4}
+\citation{makridakis2000m3}
+\citation{wu2022timesnet}
+\citation{wu2022timesnet}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}Dataset Details}{15}{subsection.B.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces {\textcolor {black}{Dataset statistics are from \citep  {wu2022timesnet}. The dimension indicates the number of time series (i.e., channels), and the dataset size is organized in (training, validation, testing).}}}}{15}{table.caption.16}\protected@file@percent }
+\newlabel{tab:dataset}{{8}{15}{\revision {Dataset statistics are from \citep {wu2022timesnet}. The dimension indicates the number of time series (i.e., channels), and the dataset size is organized in (training, validation, testing).}}{table.caption.16}{}}
+\citation{oreshkin2019n}
+\citation{KingmaB14adam}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}Evaluation Metrics}{16}{subsection.B.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.4}Model Configurations}{16}{subsection.B.4}\protected@file@percent }
+\newlabel{appx:model_config}{{B.4}{16}{Model Configurations}{subsection.B.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces {\textcolor {black}{An overview of the experimental configurations for \textsc  {Time-LLM}\xspace  . ``LTF'' and ``STF'' denote long-term and short-term forecasting, respectively.}}}}{16}{table.caption.18}\protected@file@percent }
+\newlabel{tab:model_config}{{9}{16}{\revision {An overview of the experimental configurations for \method . ``LTF'' and ``STF'' denote long-term and short-term forecasting, respectively.}}{table.caption.18}{}}
+\citation{herzen2022darts}
+\citation{challu2023nhits}
+\citation{oreshkin2019n}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Hyperparameter Sensitivity}{17}{appendix.C}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Analysis of hyperparameter sensitivity on ETTh1 dataset.}}{17}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:visual_sensitivity}{{6}{17}{Analysis of hyperparameter sensitivity on ETTh1 dataset}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Long-term and Short-term Forecasting}{17}{appendix.D}\protected@file@percent }
+\newlabel{appx:short-term}{{D}{17}{Long-term and Short-term Forecasting}{appendix.D}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.1}Long-term Forecasting}{17}{subsection.D.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces {\textcolor {black}{Full long-term forecasting results. We set the forecasting horizons $H \in \{24, 36, 48, 60\}$ for ILI and $\{96, 192, 336, 720\}$ for the others. A lower value indicates better performance. {{\textbf  {\textcolor {red}{Red}}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best.}}}}{18}{table.caption.21}\protected@file@percent }
+\newlabel{tab:long-term-forecasting-full}{{10}{18}{\revision {Full long-term forecasting results. We set the forecasting horizons $H \in \{24, 36, 48, 60\}$ for ILI and $\{96, 192, 336, 720\}$ for the others. A lower value indicates better performance. {\boldres {Red}}: the best, \secondres {Blue}: the second best.}}{table.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.2}Short-term Forecasting}{18}{subsection.D.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {E}Few-shot and Zero-shot Forecasting}{18}{appendix.E}\protected@file@percent }
+\newlabel{appx:zero-shot}{{E}{18}{Few-shot and Zero-shot Forecasting}{appendix.E}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {E.1}Few-shot Forecasting}{18}{subsection.E.1}\protected@file@percent }
+\citation{gruver2023large}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces {\textcolor {black}{Additional comparison with other baselines in long-term forecasting tasks. We set the forecasting horizons $H \in \{24, 36, 48, 60\}$ for ILI and $\{96, 192, 336, 720\}$ for the others. A lower value indicates better performance. {{\textbf  {\textcolor {red}{Red}}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best.}}}}{19}{table.caption.22}\protected@file@percent }
+\newlabel{tab:long-term-forecasting-full-additional-baselines}{{11}{19}{\revision {Additional comparison with other baselines in long-term forecasting tasks. We set the forecasting horizons $H \in \{24, 36, 48, 60\}$ for ILI and $\{96, 192, 336, 720\}$ for the others. A lower value indicates better performance. {\boldres {Red}}: the best, \secondres {Blue}: the second best.}}{table.caption.22}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Full short-term time series forecasting results. The forecasting horizons are in [6, 48] and the last three rows are weighted averaged from all datasets under different sampling intervals. A lower value indicates better performance. {\textbf  {\textcolor {red}{Red}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best.}}{19}{table.caption.23}\protected@file@percent }
+\newlabel{tab:short-term-forecasting}{{12}{19}{Full short-term time series forecasting results. The forecasting horizons are in [6, 48] and the last three rows are weighted averaged from all datasets under different sampling intervals. A lower value indicates better performance. \boldres {Red}: the best, \secondres {Blue}: the second best}{table.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {E.2}Zero-shot Forecasting}{19}{subsection.E.2}\protected@file@percent }
+\citation{dettmers2023qlora}
+\citation{dettmers2023qlora}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces {\textcolor {black}{Additional short-term time series forecasting results on M3 (Quarterly). The forecasting horizon is 8. A lower value indicates better performance. {\textbf  {\textcolor {red}{Red}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best.}}}}{20}{table.caption.24}\protected@file@percent }
+\newlabel{tab:short-term-forecasting-M3}{{13}{20}{\revision {Additional short-term time series forecasting results on M3 (Quarterly). The forecasting horizon is 8. A lower value indicates better performance. \boldres {Red}: the best, \secondres {Blue}: the second best.}}{table.caption.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Ablation Study}{20}{appendix.F}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {G}Efficiency Comparison with Model Fine-Tuning}{20}{appendix.G}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Setups.}{20}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{20}{section*.31}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces {\textcolor {black}{Full few-shot learning results on 10\% training data. We use the same protocol as in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {tab:long-term-forecasting}\endgroup .}}}}{20}{table.caption.25}\protected@file@percent }
+\newlabel{tab:few-shot-forecasting-10per-full}{{14}{20}{\revision {Full few-shot learning results on 10\% training data. We use the same protocol as in \shortautoref {tab:long-term-forecasting}.}}{table.caption.25}{}}
+\citation{dettmers2023qlora}
+\citation{dettmers2023qlora}
+\citation{nie2022time}
+\citation{challu2022nhits}
+\citation{nie2022time}
+\citation{challu2022nhits}
+\citation{zhou2023one}
+\citation{nie2022time}
+\citation{wu2021autoformer}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces {\textcolor {black}{Full few-shot learning results on 5\% training data. We use the same protocol as in \begingroup \def section{Sec.}\def subsection{Sec.}\def Figure{Fig.}\def Table{Tab.}\def Equation{Eq.}\autoref {tab:long-term-forecasting}\endgroup . '-' means that 5\% time series is not sufficient to constitute a training set.}}}}{21}{table.caption.26}\protected@file@percent }
+\newlabel{tab:few-shot-forecasting-5per-full}{{15}{21}{\revision {Full few-shot learning results on 5\% training data. We use the same protocol as in \shortautoref {tab:long-term-forecasting}. '-' means that 5\% time series is not sufficient to constitute a training set.}}{table.caption.26}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {H}Error bars}{21}{appendix.H}\protected@file@percent }
+\newlabel{sec:error_bar}{{H}{21}{Error bars}{appendix.H}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Visualization}{21}{appendix.I}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces {\textcolor {black}{Full zero-shot learning results on ETT datasets. A lower value indicates better performance. {\textbf  {\textcolor {red}{Red}}}: the best, {\underline  {\textcolor {blue}{Blue}}}: the second best.}}}}{22}{table.caption.27}\protected@file@percent }
+\newlabel{tab:zero-shot-forecasting}{{16}{22}{\revision {Full zero-shot learning results on ETT datasets. A lower value indicates better performance. \boldres {Red}: the best, \secondres {Blue}: the second best.}}{table.caption.27}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Full ablations on ETTh1 and ETTm1 in predicting 96 and 192 steps ahead (MSE reported). }}{22}{table.caption.28}\protected@file@percent }
+\newlabel{tab:full-ablations}{{17}{22}{Full ablations on ETTh1 and ETTm1 in predicting 96 and 192 steps ahead (MSE reported)}{table.caption.28}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Efficiency comparison between model reprogramming and parameter-efficient fine-tuning (PEFT) with QLoRA~\citep  {dettmers2023qlora} on ETTh1 dataset in forecasting two different steps ahead.}}{23}{table.caption.32}\protected@file@percent }
+\newlabel{tab:additional_efficiency_comparison}{{18}{23}{Efficiency comparison between model reprogramming and parameter-efficient fine-tuning (PEFT) with QLoRA~\citep {dettmers2023qlora} on ETTh1 dataset in forecasting two different steps ahead}{table.caption.32}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces {\textcolor {black}{Standard deviations of our approach and the second-best method (PatchTST) on all time series datasets for long-term forecasting.}}}}{23}{table.caption.33}\protected@file@percent }
+\newlabel{tab:errorbar_long}{{19}{23}{\revision {Standard deviations of our approach and the second-best method (PatchTST) on all time series datasets for long-term forecasting.}}{table.caption.33}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces Standard deviations of our \textsc  {Time-LLM}\xspace  and the second-best method (N-HiTS) on M4 datasets for short-term forecasting.}}{23}{table.caption.35}\protected@file@percent }
+\newlabel{tab:errorbar_short}{{20}{23}{Standard deviations of our \method and the second-best method (N-HiTS) on M4 datasets for short-term forecasting}{table.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Long-term forecasting cases from ETTh1 by different models under the input-96-predict-96 settings. \textcolor {blue}{Blue} lines are the ground truths and \textcolor {orange}{orange} lines are the model predictions.}}{24}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:visual_etth1}{{7}{24}{Long-term forecasting cases from ETTh1 by different models under the input-96-predict-96 settings. \textcolor {blue}{Blue} lines are the ground truths and \textcolor {orange}{orange} lines are the model predictions}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Short-term forecasting from the M4 dataset by different models under the input-36-predict-18 settings.}}{24}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:visual_m4}{{8}{24}{Short-term forecasting from the M4 dataset by different models under the input-36-predict-18 settings}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Few-shot forecasting cases from ETTm1 by different models under the input-96-predict-96 settings. \textcolor {blue}{Blue} lines are the ground truths and \textcolor {orange}{orange} lines are the model predictions.}}{24}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:visual_ettm1}{{9}{24}{Few-shot forecasting cases from ETTm1 by different models under the input-96-predict-96 settings. \textcolor {blue}{Blue} lines are the ground truths and \textcolor {orange}{orange} lines are the model predictions}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Zero-shot forecasting cases from ETTh1$\rightarrow $ETTh2 by different models under the input-96-predict-96 settings. \textcolor {blue}{Blue} lines are the ground truths and \textcolor {orange}{orange} lines are the model predictions.}}{24}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:visual_etth1_etth2}{{10}{24}{Zero-shot forecasting cases from ETTh1$\rightarrow $ETTh2 by different models under the input-96-predict-96 settings. \textcolor {blue}{Blue} lines are the ground truths and \textcolor {orange}{orange} lines are the model predictions}{figure.caption.40}{}}
+\gdef \@abspage@last{24}

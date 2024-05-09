@@ -1,0 +1,37 @@
+\begin{table}[t]
+\captionsetup{font=small} 
+  \caption{Ablations on ETTh1 and ETTm1 in predicting 96 and 192 steps ahead (MSE reported). \boldres{Red}: the best.
+  }\label{tab:ablations}
+  \vspace{-1mm}
+  % \vskip -0.05in
+  \centering
+  \begin{threeparttable}
+  \begin{small}
+  \scalebox{0.65}{
+  \renewcommand{\multirowsetup}{\centering}
+  \setlength{\tabcolsep}{5pt}
+  \begin{tabular}{l|cccc|cccc}
+    \toprule
+   \multirow{2}{*}{Variant} & \multicolumn{4}{c|}{Long-term Forecasting} & \multicolumn{4}{c}{Few-shot Forecasting} \\
+   \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+    &ETTh1-96 &ETTh1-192 &ETTm1-96 &ETThm1-192 &ETTh1-96 &ETTh1-192 &ETTm1-96 &ETThm1-192\\
+    \midrule
+    \textbf{A.1} Llama (\textbf{Default}; 32) &\boldres{0.362} &\boldres{0.398} &\boldres{0.272} &\boldres{0.310} &\boldres{0.448} &\boldres{0.484} &\boldres{0.346} &\boldres{0.373} \\
+    \textbf{A.2} Llama (8) & 0.389 & 0.412 & 0.297 & 0.329 & 0.567 & 0.632 & 0.451 & 0.490 \\
+    \textbf{A.3} GPT-2 (12) & 0.385 & 0.419 & 0.306 &0.332  & 0.548 & 0.617 & 0.447 & 0.509 \\
+    \textbf{A.4} GPT-2 (6) & 0.394 & 0.427 & 0.311 & 0.342 & 0.571 & 0.640 & 0.468 & 0.512 \\
+    \midrule
+    \textbf{B.1} w/o Patch Reprogramming& 0.410 & 0.412 & 0.310 & 0.342 & 0.498 & 0.570 & 0.445 & 0.487\\
+    \textbf{B.2} w/o Prompt-as-Prefix & 0.398 & 0.423 & 0.298 & 0.339 & 0.521 & 0.617 & 0.432 & 0.481\\
+    \midrule
+    \textbf{C.1} w/o Dataset Context & 0.402 & 0.417 & 0.298 & 0.331 & 0.491 & 0.538 & 0.392 & 0.447\\
+    \textbf{C.2} w/o Task Instruction & 0.388 & 0.420 & 0.285 & 0.327 & 0.476 & 0.529 & 0.387 & 0.439\\
+    \textbf{C.3} w/o Statistical Context & 0.391 & 0.419 & 0.279 & 0.347 & 0.483 & 0.547 & 0.421 & 0.461 \\
+
+    \bottomrule
+  \end{tabular}
+  }
+    \end{small}
+  \end{threeparttable}
+  \vspace{-2mm}
+\end{table}

@@ -1,0 +1,59 @@
+\begin{wraptable}{R}{0.6\textwidth}
+\renewcommand\arraystretch{1.2}
+\begin{center}
+\vskip -0.6in
+\captionsetup{font=small} 
+\caption{\revision{Zero-shot learning results. \boldres{Red}: the best, \secondres{Blue}: the second best. \shortautoref{appx:zero-shot} shows our detailed results.}}
+\label{tab:zero-shot-forecasting-brief}
+\vspace{-2mm}
+\begin{small}
+\scalebox{0.62}{
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{c|cc|cc|cc|cc|cc|cc}
+\toprule
+\multicolumn{1}{c|}{\multirow{2}{*}{Methods}}
+&\multicolumn{2}{c|}{\method}&\multicolumn{2}{c|}{GPT4TS}&\multicolumn{2}{c|}{\revision{LLMTime}}&\multicolumn{2}{c|}{DLinear}&\multicolumn{2}{c|}{PatchTST}&\multicolumn{2}{c}{TimesNet}\\
+
+\multicolumn{1}{c|}{} & \multicolumn{2}{c}{\scalebox{0.99}{(\textbf{Ours})}} & 
+\multicolumn{2}{|c|}{\scalebox{0.99}{\citeyearpar{zhou2023one}}} &
+\multicolumn{2}{c|}{\scalebox{0.99}{\revision{\citeyearpar{gruver2023large}}}} &
+\multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{zeng2023transformers}}} & \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{nie2022time}}} & \multicolumn{2}{c}{\scalebox{0.99}{\citeyearpar{wu2022timesnet}}}  \\
+
+\midrule
+
+\multicolumn{1}{c|}{Metric} & MSE & MAE & MSE & MAE & \revision{MSE} & \revision{MAE} & MSE & MAE & MSE & MAE& MSE & MAE \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTh1$} $\rightarrow$ \rotatebox{0}{$ETTh2$}}  
+& \boldres{0.353} & \boldres{0.387} & 0.406 & 0.422 & 0.992 & 0.708 & 0.493 & 0.488 & \secondres{0.380} & \secondres{0.405} & 0.421 & 0.431 \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTh1 $} $\rightarrow$ \rotatebox{0}{$ETTm2 $}}
+& \boldres{0.273} & \boldres{0.340} & 0.325 & 0.363 & 1.867 & 0.869 & 0.415 & 0.452 & \secondres{0.314} & \secondres{0.360} & 0.327 & 0.361 \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTh2 $} $\rightarrow$ \rotatebox{0}{$ETTh1 $}}
+& \boldres{0.479} & \boldres{0.474} & 0.757 & 0.578 & 1.961 & 0.981 & 0.703 & 0.574 & \secondres{0.565} & \secondres{0.513} & 0.865 & 0.621 \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTh2 $} $\rightarrow$ \rotatebox{0}{$ETTm2 $}}
+& \boldres{0.272} & \boldres{0.341} & 0.335 & 0.370 & 1.867 & 0.869 & 0.328 & 0.386 & \secondres{0.325} & \secondres{0.365} & 0.342 & 0.376 \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTm1 $} $\rightarrow$ \rotatebox{0}{$ETTh2 $}}
+& \boldres{0.381} & \boldres{0.412} & \secondres{0.433} & 0.439 & 0.992 & 0.708 & 0.464 & 0.475 & 0.439 & \secondres{0.438} & 0.457 & 0.454 \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTm1 $} $\rightarrow$ \rotatebox{0}{$ETTm2 $}}
+& \boldres{0.268} & \boldres{0.320} & 0.313 & 0.348 & 1.867 & 0.869 & 0.335 & 0.389 & \secondres{0.296} & \secondres{0.334} & 0.322 & 0.354 \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTm2 $} $\rightarrow$ \rotatebox{0}{$ETTh2 $}}
+
+& \boldres{0.354} & \boldres{0.400} & 0.435 & 0.443 & 0.992 & 0.708 & 0.455 & 0.471 & \secondres{0.409} & \secondres{0.425} & 0.435 & 0.443 \\
+\midrule
+\multirow{1}{*}{\rotatebox{0}{$ETTm2 $} $\rightarrow$ \rotatebox{0}{$ETTm1 $}}
+& \boldres{0.414} & \boldres{0.438} & 0.769 & 0.567 & 1.933 & 0.984 & 0.649 & 0.537 & \secondres{0.568} & \secondres{0.492} & 0.769 & 0.567 \\
+
+\bottomrule
+
+\end{tabular}
+}
+\end{small}
+\end{center}
+% \end{table}
+\vskip -0.17in
+\end{wraptable}

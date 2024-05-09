@@ -1,0 +1,302 @@
+\begin{thebibliography}{59}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bai et~al.(2018)Bai, Kolter, and Koltun]{bai2018empirical}
+Shaojie Bai, J~Zico Kolter, and Vladlen Koltun.
+\newblock An empirical evaluation of generic convolutional and recurrent networks for sequence modeling.
+\newblock \emph{arXiv preprint arXiv:1803.01271}, 2018.
+
+\bibitem[Box et~al.(2015)Box, Jenkins, Reinsel, and Ljung]{box2015time}
+George~EP Box, Gwilym~M Jenkins, Gregory~C Reinsel, and Greta~M Ljung.
+\newblock \emph{Time series analysis: forecasting and control}.
+\newblock John Wiley \& Sons, 2015.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, et~al.]{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock \emph{Advances in Neural Information Processing Systems}, 33:\penalty0 1877--1901, 2020.
+
+\bibitem[Challu et~al.(2023{\natexlab{a}})Challu, Olivares, Oreshkin, Garza, Mergenthaler, and Dubrawski]{challu2022nhits}
+Cristian Challu, Kin~G Olivares, Boris~N Oreshkin, Federico Garza, Max Mergenthaler, and Artur Dubrawski.
+\newblock N-hits: Neural hierarchical interpolation for time series forecasting.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 2023{\natexlab{a}}.
+
+\bibitem[Challu et~al.(2023{\natexlab{b}})Challu, Olivares, Oreshkin, Ramirez, Canseco, and Dubrawski]{challu2023nhits}
+Cristian Challu, Kin~G Olivares, Boris~N Oreshkin, Federico~Garza Ramirez, Max~Mergenthaler Canseco, and Artur Dubrawski.
+\newblock Nhits: neural hierarchical interpolation for time series forecasting.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, volume~37, pp.\  6989--6997, 2023{\natexlab{b}}.
+
+\bibitem[Chang et~al.(2023)Chang, Peng, and Chen]{chang2023llm4ts}
+Ching Chang, Wen-Chih Peng, and Tien-Fu Chen.
+\newblock Llm4ts: Two-stage fine-tuning for time-series forecasting with pre-trained llms.
+\newblock \emph{arXiv preprint arXiv:2308.08469}, 2023.
+
+\bibitem[Chen(2022)]{chen2022model}
+Pin-Yu Chen.
+\newblock Model reprogramming: Resource-efficient cross-domain machine learning.
+\newblock \emph{arXiv preprint arXiv:2202.10629}, 2022.
+
+\bibitem[Chu et~al.(2023)Chu, Hao, Ouyang, Wang, Wang, Shen, Gu, Cui, Li, Xue, et~al.]{chu2023leveraging}
+Zhixuan Chu, Hongyan Hao, Xin Ouyang, Simeng Wang, Yan Wang, Yue Shen, Jinjie Gu, Qing Cui, Longfei Li, Siqiao Xue, et~al.
+\newblock Leveraging large language models for pre-trained recommender systems.
+\newblock \emph{arXiv preprint arXiv:2308.10837}, 2023.
+
+\bibitem[Deldari et~al.(2022)Deldari, Xue, Saeed, He, Smith, and Salim]{deldari2022beyond}
+Shohreh Deldari, Hao Xue, Aaqib Saeed, Jiayuan He, Daniel~V Smith, and Flora~D Salim.
+\newblock Beyond just vision: A review on self-supervised representation learning on multimodal and temporal data.
+\newblock \emph{arXiv preprint arXiv:2206.02353}, 2022.
+
+\bibitem[Dettmers et~al.(2023)Dettmers, Pagnoni, Holtzman, and Zettlemoyer]{dettmers2023qlora}
+Tim Dettmers, Artidoro Pagnoni, Ari Holtzman, and Luke Zettlemoyer.
+\newblock Qlora: Efficient finetuning of quantized llms.
+\newblock \emph{Advances in Neural Information Processing Systems}, 2023.
+
+\bibitem[Devlin et~al.(2018)Devlin, Chang, Lee, and Toutanova]{devlin2018bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language understanding.
+\newblock In \emph{Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}, 2018.
+
+\bibitem[Fawaz et~al.(2018)Fawaz, Forestier, Weber, Idoumghar, and Muller]{fawaz2018transfer}
+Hassan~Ismail Fawaz, Germain Forestier, Jonathan Weber, Lhassane Idoumghar, and Pierre-Alain Muller.
+\newblock Transfer learning for time series classification.
+\newblock In \emph{IEEE International Conference on Big Data}, pp.\  1367--1376. IEEE, 2018.
+
+\bibitem[Gruver et~al.(2023)Gruver, Finzi, Qiu, and Wilson]{gruver2023large}
+Nate Gruver, Marc~Anton Finzi, Shikai Qiu, and Andrew~Gordon Wilson.
+\newblock Large language models are zero-shot time series forecasters.
+\newblock \emph{Advances in Neural Information Processing Systems}, 2023.
+
+\bibitem[Herzen et~al.(2022)Herzen, Lassig, Piazzetta, Neuer, Tafti, Raille, Van~Pottelbergh, Pasieka, Skrodzki, Huguenin, et~al.]{herzen2022darts}
+Julien Herzen, Francesco Lassig, Samuele~Giuliano Piazzetta, Thomas Neuer, Leo Tafti, Guillaume Raille, Tomas Van~Pottelbergh, Marek Pasieka, Andrzej Skrodzki, Nicolas Huguenin, et~al.
+\newblock Darts: User-friendly modern machine learning for time series.
+\newblock \emph{The Journal of Machine Learning Research}, 23\penalty0 (1):\penalty0 5442--5447, 2022.
+
+\bibitem[Hochreiter \& Schmidhuber(1997)Hochreiter and Schmidhuber]{hochreiter1997long}
+Sepp Hochreiter and J{\"u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock \emph{Neural computation}, 9\penalty0 (8):\penalty0 1735--1780, 1997.
+
+\bibitem[Jin et~al.(2023{\natexlab{a}})Jin, Koh, Wen, Zambon, Alippi, Webb, King, and Pan]{jin2023survey}
+Ming Jin, Huan~Yee Koh, Qingsong Wen, Daniele Zambon, Cesare Alippi, Geoffrey~I Webb, Irwin King, and Shirui Pan.
+\newblock A survey on graph neural networks for time series: Forecasting, classification, imputation, and anomaly detection.
+\newblock \emph{arXiv preprint arXiv:2307.03759}, 2023{\natexlab{a}}.
+
+\bibitem[Jin et~al.(2023{\natexlab{b}})Jin, Wen, Liang, Zhang, Xue, Wang, Zhang, Wang, Chen, Li, et~al.]{jin2023large}
+Ming Jin, Qingsong Wen, Yuxuan Liang, Chaoli Zhang, Siqiao Xue, Xue Wang, James Zhang, Yi~Wang, Haifeng Chen, Xiaoli Li, et~al.
+\newblock Large models for time series and spatio-temporal data: A survey and outlook.
+\newblock \emph{arXiv preprint arXiv:2310.10196}, 2023{\natexlab{b}}.
+
+\bibitem[Kim et~al.(2021)Kim, Kim, Tae, Park, Choi, and Choo]{kim2021reversible}
+Taesung Kim, Jinhee Kim, Yunwon Tae, Cheonbok Park, Jang-Ho Choi, and Jaegul Choo.
+\newblock Reversible instance normalization for accurate time-series forecasting against distribution shift.
+\newblock In \emph{International Conference on Learning Representations}, 2021.
+
+\bibitem[Kingma \& Ba(2015)Kingma and Ba]{KingmaB14adam}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: {A} method for stochastic optimization.
+\newblock \emph{International Conference on Learning Representations}, 2015.
+
+\bibitem[Kitaev et~al.(2020)Kitaev, Kaiser, and Levskaya]{kitaev2020reformer}
+Nikita Kitaev, {\L}ukasz Kaiser, and Anselm Levskaya.
+\newblock Reformer: The efficient transformer.
+\newblock In \emph{International Conference on Learning Representations}, 2020.
+
+\bibitem[Kojima et~al.(2022)Kojima, Gu, Reid, Matsuo, and Iwasawa]{kojima2205large}
+Takeshi Kojima, Shixiang~Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa.
+\newblock Large language models are zero-shot reasoners.
+\newblock \emph{Advances in neural information processing systems}, 35:\penalty0 22199--22213, 2022.
+
+\bibitem[Leonard(2001)]{leonard2001promotional}
+Michael Leonard.
+\newblock Promotional analysis and forecasting for demand planning: a practical time series approach.
+\newblock \emph{with exhibits}, 1, 2001.
+
+\bibitem[Li et~al.(2022)Li, Arnold, Down, Barty, Blake, Chiang, Courtney, Waito, Trifunov, and Heddle]{li2022demand}
+Na~Li, Donald~M Arnold, Douglas~G Down, Rebecca Barty, John Blake, Fei Chiang, Tom Courtney, Marianne Waito, Rick Trifunov, and Nancy~M Heddle.
+\newblock From demand forecasting to inventory ordering decisions for red blood cells through integrating machine learning, statistical modeling, and inventory optimization.
+\newblock \emph{Transfusion}, 62\penalty0 (1):\penalty0 87--99, 2022.
+
+\bibitem[Liu et~al.(2023{\natexlab{a}})Liu, Ma, Yang, Zhou, Xia, Wang, Wen, and Sun]{liu2023sadi}
+Hengbo Liu, Ziqing Ma, Linxiao Yang, Tian Zhou, Rui Xia, Yi~Wang, Qingsong Wen, and Liang Sun.
+\newblock Sadi: A self-adaptive decomposed interpretable framework for electric load forecasting under extreme events.
+\newblock In \emph{IEEE International Conference on Acoustics, Speech and Signal Processing}, 2023{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2023{\natexlab{b}})Liu, McDuff, Kovacs, Galatzer-Levy, Sunshine, Zhan, Poh, Liao, Di~Achille, and Patel]{liu2023large}
+Xin Liu, Daniel McDuff, Geza Kovacs, Isaac Galatzer-Levy, Jacob Sunshine, Jiening Zhan, Ming-Zher Poh, Shun Liao, Paolo Di~Achille, and Shwetak Patel.
+\newblock Large language models are few-shot health learners.
+\newblock \emph{arXiv preprint arXiv:2305.15525}, 2023{\natexlab{b}}.
+
+\bibitem[Liu et~al.(2022)Liu, Wu, Wang, and Long]{liu2022non}
+Yong Liu, Haixu Wu, Jianmin Wang, and Mingsheng Long.
+\newblock Non-stationary transformers: Exploring the stationarity in time series forecasting.
+\newblock \emph{Advances in Neural Information Processing Systems}, 35:\penalty0 9881--9893, 2022.
+
+\bibitem[Ma et~al.(2023)Ma, Wu, Zheng, Guo, Chen, Zhang, and Chen]{ma2023leveraging}
+Ziyang Ma, Wen Wu, Zhisheng Zheng, Yiwei Guo, Qian Chen, Shiliang Zhang, and Xie Chen.
+\newblock Leveraging speech ptm, text llm, and emotional tts for speech emotion recognition.
+\newblock \emph{arXiv preprint arXiv:2309.10294}, 2023.
+
+\bibitem[Makridakis \& Hibon(2000)Makridakis and Hibon]{makridakis2000m3}
+Spyros Makridakis and Michele Hibon.
+\newblock The m3-competition: results, conclusions and implications.
+\newblock \emph{International journal of forecasting}, 16\penalty0 (4):\penalty0 451--476, 2000.
+
+\bibitem[Makridakis et~al.(2018)Makridakis, Spiliotis, and Assimakopoulos]{makridakis2018m4}
+Spyros Makridakis, Evangelos Spiliotis, and Vassilios Assimakopoulos.
+\newblock The m4 competition: Results, findings, conclusion and way forward.
+\newblock \emph{International Journal of Forecasting}, 34\penalty0 (4):\penalty0 802--808, 2018.
+
+\bibitem[Melnyk et~al.(2023)Melnyk, Chenthamarakshan, Chen, Das, Dhurandhar, Padhi, and Das]{melnyk2023reprogramming}
+Igor Melnyk, Vijil Chenthamarakshan, Pin-Yu Chen, Payel Das, Amit Dhurandhar, Inkit Padhi, and Devleena Das.
+\newblock Reprogramming pretrained language models for antibody sequence infilling.
+\newblock In \emph{International Conference on Machine Learning}, 2023.
+
+\bibitem[Mirchandani et~al.(2023)Mirchandani, Xia, Florence, Driess, Arenas, Rao, Sadigh, Zeng, et~al.]{mirchandani2023large}
+Suvir Mirchandani, Fei Xia, Pete Florence, Danny Driess, Montserrat~Gonzalez Arenas, Kanishka Rao, Dorsa Sadigh, Andy Zeng, et~al.
+\newblock Large language models as general pattern machines.
+\newblock In \emph{Proceedings of the 7th Annual Conference on Robot Learning}, 2023.
+
+\bibitem[Misra et~al.(2023)Misra, Goyal, Runwal, and Chen]{misra2023reprogramming}
+Diganta Misra, Agam Goyal, Bharat Runwal, and Pin~Yu Chen.
+\newblock Reprogramming under constraints: Revisiting efficient and reliable transferability of lottery tickets.
+\newblock \emph{arXiv preprint arXiv:2308.14969}, 2023.
+
+\bibitem[Nie et~al.(2023)Nie, Nguyen, Sinthong, and Kalagnanam]{nie2022time}
+Yuqi Nie, Nam~H Nguyen, Phanwadee Sinthong, and Jayant Kalagnanam.
+\newblock A time series is worth 64 words: Long-term forecasting with transformers.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+
+\bibitem[OpenAI(2023)]{openai2023gpt4}
+OpenAI.
+\newblock Gpt-4 technical report, 2023.
+
+\bibitem[Oreshkin et~al.(2020)Oreshkin, Carpov, Chapados, and Bengio]{oreshkin2019n}
+Boris~N Oreshkin, Dmitri Carpov, Nicolas Chapados, and Yoshua Bengio.
+\newblock N-beats: Neural basis expansion analysis for interpretable time series forecasting.
+\newblock In \emph{International Conference on Learning Representations}, 2020.
+
+\bibitem[Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan, Killeen, Lin, Gimelshein, Antiga, et~al.]{paszke2019pytorch}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et~al.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock \emph{Advances in Neural Information Processing Systems}, 32, 2019.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever, et~al.]{radford2019language}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et~al.
+\newblock Language models are unsupervised multitask learners.
+\newblock \emph{OpenAI blog}, 1\penalty0 (8):\penalty0 9, 2019.
+
+\bibitem[Schneider \& Dickinson(1974)Schneider and Dickinson]{schneider1974climate}
+Stephen~H Schneider and Robert~E Dickinson.
+\newblock Climate modeling.
+\newblock \emph{Reviews of Geophysics}, 12\penalty0 (3):\penalty0 447--493, 1974.
+
+\bibitem[Tang et~al.(2022)Tang, Qu, Chow, Lam, Wong, and Ma]{tang2022domain}
+Yihong Tang, Ao~Qu, Andy~HF Chow, William~HK Lam, SC~Wong, and Wei Ma.
+\newblock Domain adversarial spatial-temporal network: a transferable framework for short-term traffic forecasting across cities.
+\newblock In \emph{Proceedings of the 31st ACM International Conference on Information \& Knowledge Management}, pp.\  1905--1915, 2022.
+
+\bibitem[Touvron et~al.(2023)Touvron, Lavril, Izacard, Martinet, Lachaux, Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, et~al.]{touvron2023llama}
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timoth{\'e}e Lacroix, Baptiste Rozi{\`e}re, Naman Goyal, Eric Hambro, Faisal Azhar, et~al.
+\newblock Llama: Open and efficient foundation language models.
+\newblock \emph{arXiv preprint arXiv:2302.13971}, 2023.
+
+\bibitem[Tsimpoukelli et~al.(2021)Tsimpoukelli, Menick, Cabi, Eslami, Vinyals, and Hill]{tsimpoukelli2021multimodal}
+Maria Tsimpoukelli, Jacob~L Menick, Serkan Cabi, SM~Eslami, Oriol Vinyals, and Felix Hill.
+\newblock Multimodal few-shot learning with frozen language models.
+\newblock \emph{Advances in Neural Information Processing Systems}, 34:\penalty0 200--212, 2021.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock \emph{Advances in Neural Information Processing Systems}, 30, 2017.
+
+\bibitem[Vinod et~al.(2020)Vinod, Chen, and Das]{vinod2020reprogramming}
+Ria Vinod, Pin-Yu Chen, and Payel Das.
+\newblock Reprogramming language models for molecular representation learning.
+\newblock In \emph{Annual Conference on Neural Information Processing Systems}, 2020.
+
+\bibitem[Wang et~al.(2023)Wang, Chu, Ouyang, Wang, Hao, Shen, Gu, Xue, Zhang, Cui, et~al.]{wang2023enhancing}
+Yan Wang, Zhixuan Chu, Xin Ouyang, Simeng Wang, Hongyan Hao, Yue Shen, Jinjie Gu, Siqiao Xue, James~Y Zhang, Qing Cui, et~al.
+\newblock Enhancing recommender systems with large language model reasoning graphs.
+\newblock \emph{arXiv preprint arXiv:2308.10835}, 2023.
+
+\bibitem[Wen et~al.(2023)Wen, Zhou, Zhang, Chen, Ma, Yan, and Sun]{wen2023transformers}
+Qingsong Wen, Tian Zhou, Chaoli Zhang, Weiqi Chen, Ziqing Ma, Junchi Yan, and Liang Sun.
+\newblock Transformers in time series: A survey.
+\newblock In \emph{International Joint Conference on Artificial Intelligence}, 2023.
+
+\bibitem[Woo et~al.(2022)Woo, Liu, Sahoo, Kumar, and Hoi]{woo2022etsformer}
+Gerald Woo, Chenghao Liu, Doyen Sahoo, Akshat Kumar, and Steven Hoi.
+\newblock Etsformer: Exponential smoothing transformers for time-series forecasting.
+\newblock \emph{arXiv preprint arXiv:2202.01381}, 2022.
+
+\bibitem[Wu et~al.(2021)Wu, Xu, Wang, and Long]{wu2021autoformer}
+Haixu Wu, Jiehui Xu, Jianmin Wang, and Mingsheng Long.
+\newblock Autoformer: Decomposition transformers with auto-correlation for long-term series forecasting.
+\newblock \emph{Advances in Neural Information Processing Systems}, 34:\penalty0 22419--22430, 2021.
+
+\bibitem[Wu et~al.(2023)Wu, Hu, Liu, Zhou, Wang, and Long]{wu2022timesnet}
+Haixu Wu, Tengge Hu, Yong Liu, Hang Zhou, Jianmin Wang, and Mingsheng Long.
+\newblock Timesnet: Temporal 2d-variation modeling for general time series analysis.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+
+\bibitem[Xue \& Salim(2022)Xue and Salim]{xue2022prompt}
+Hao Xue and Flora~D Salim.
+\newblock Prompt-based time series forecasting: A new task and dataset.
+\newblock \emph{arXiv preprint arXiv:2210.08964}, 2022.
+
+\bibitem[Yang et~al.(2021)Yang, Tsai, and Chen]{yang2021voice2series}
+Chao-Han~Huck Yang, Yun-Yun Tsai, and Pin-Yu Chen.
+\newblock Voice2series: Reprogramming acoustic models for time series classification.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  11808--11819. PMLR, 2021.
+
+\bibitem[Yin et~al.(2023)Yin, Fu, Zhao, Li, Sun, Xu, and Chen]{yin2023survey}
+Shukang Yin, Chaoyou Fu, Sirui Zhao, Ke~Li, Xing Sun, Tong Xu, and Enhong Chen.
+\newblock A survey on multimodal large language models.
+\newblock \emph{arXiv preprint arXiv:2306.13549}, 2023.
+
+\bibitem[Zeng et~al.(2023)Zeng, Chen, Zhang, and Xu]{zeng2023transformers}
+Ailing Zeng, Muxi Chen, Lei Zhang, and Qiang Xu.
+\newblock Are transformers effective for time series forecasting?
+\newblock In \emph{Proceedings of the AAAI conference on artificial intelligence}, volume~37, pp.\  11121--11128, 2023.
+
+\bibitem[Zhang et~al.(2023)Zhang, Wen, Zhang, Cai, Jin, Liu, Zhang, Liang, Pang, Song, et~al.]{zhang2023self}
+Kexin Zhang, Qingsong Wen, Chaoli Zhang, Rongyao Cai, Ming Jin, Yong Liu, James Zhang, Yuxuan Liang, Guansong Pang, Dongjin Song, et~al.
+\newblock Self-supervised learning for time series analysis: Taxonomy, progress, and prospects.
+\newblock \emph{arXiv preprint arXiv:2306.10125}, 2023.
+
+\bibitem[Zhang et~al.(2022{\natexlab{a}})Zhang, Zhang, Cao, Bian, Yi, Zheng, and Li]{zhang2022less}
+Tianping Zhang, Yizhuo Zhang, Wei Cao, Jiang Bian, Xiaohan Yi, Shun Zheng, and Jian Li.
+\newblock Less is more: Fast multivariate time series forecasting with light sampling-oriented mlp structures.
+\newblock \emph{arXiv preprint arXiv:2207.01186}, 2022{\natexlab{a}}.
+
+\bibitem[Zhang et~al.(2022{\natexlab{b}})Zhang, Zhao, Tsiligkaridis, and Zitnik]{zhang2022self}
+Xiang Zhang, Ziyuan Zhao, Theodoros Tsiligkaridis, and Marinka Zitnik.
+\newblock Self-supervised contrastive pre-training for time series via time-frequency consistency.
+\newblock \emph{Advances in Neural Information Processing Systems}, 35:\penalty0 3988--4003, 2022{\natexlab{b}}.
+
+\bibitem[Zhou et~al.(2021)Zhou, Zhang, Peng, Zhang, Li, Xiong, and Zhang]{zhou2021informer}
+Haoyi Zhou, Shanghang Zhang, Jieqi Peng, Shuai Zhang, Jianxin Li, Hui Xiong, and Wancai Zhang.
+\newblock Informer: Beyond efficient transformer for long sequence time-series forecasting.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, volume~35, pp.\  11106--11115, 2021.
+
+\bibitem[Zhou et~al.(2022)Zhou, Ma, Wen, Wang, Sun, and Jin]{zhou2022fedformer}
+Tian Zhou, Ziqing Ma, Qingsong Wen, Xue Wang, Liang Sun, and Rong Jin.
+\newblock Fedformer: Frequency enhanced decomposed transformer for long-term series forecasting.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  27268--27286. PMLR, 2022.
+
+\bibitem[Zhou et~al.(2023{\natexlab{a}})Zhou, Niu, Wang, Sun, and Jin]{zhou2023one}
+Tian Zhou, Peisong Niu, Xue Wang, Liang Sun, and Rong Jin.
+\newblock One fits all: Power general time series analysis by pretrained lm.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2023{\natexlab{a}}.
+
+\bibitem[Zhou et~al.(2023{\natexlab{b}})Zhou, Chu, Ruan, Jin, Huang, and Li]{zhou2023ptse}
+Yunyi Zhou, Zhixuan Chu, Yijia Ruan, Ge~Jin, Yuchen Huang, and Sheng Li.
+\newblock ptse: A multi-model ensemble method for probabilistic time series forecasting.
+\newblock In \emph{The 32nd International Joint Conference on Artificial Intelligence}, 2023{\natexlab{b}}.
+
+\end{thebibliography}

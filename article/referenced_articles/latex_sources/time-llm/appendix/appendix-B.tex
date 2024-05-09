@@ -1,0 +1,136 @@
+\section{Experimental Details}\label{appx:experiment_details}
+
+\subsection{Implementation} 
+We mainly follow the experimental configurations in \citep{wu2022timesnet} across all baselines within a unified evaluation pipeline in \url{https://github.com/thuml/Time-Series-Library} for fair comparisons. We use Llama-7B~\citep{touvron2023llama} as the default backbone model unless stated otherwise. All our experiments are repeated three times and we report the averaged results. Our model implementation is on PyTorch~\citep{paszke2019pytorch} with all experiments conducted on NVIDIA A100-80G GPUs. Our detailed model configurations are in Appendix \ref{appx:model_config}, and our code is made available at \url{https://github.com/KimMeen/Time-LLM}.
+
+\noindent\revision{\textbf{Technical Details.}}
+\revision{
+We provide additional technical details of \method in three aspects: (1) the learning of text prototypes, (2) the calculation of trends and lags in time series for use in prompts, and (3) the implementation of the output projection. To identify a small set of text prototypes $\mathbf{E'} \in \mathbb{R}^{V' \times D}$ from $\mathbf{E} \in \mathbb{R}^{V \times D}$, we learn a matrix $\mathbf{W} \in \mathbb{R}^{V' \times V}$ as the intermediary. To describe the overall time series trend in natural language, we calculate the sum of differences between consecutive time steps. A sum greater than 0 indicates an upward trend, while a lesser sum denotes a downward trend. In addition, we calculate the top-5 lags of the time series, identified by computing the autocorrelation using fast Fourier transformation and selecting the five lags with the highest correlation values. After we pack and feedforward the prompt and patch embeddings $\mathbf{O}^{(i)} \in \mathbb{R}^{P \times D}$ through the frozen LLM, we discard the prefixal part and obtain the output representations, denoted as $\Tilde{\mathbf{O}}^{i} \in \mathbb{R}^{P \times D}$. Subsequently, we follow PatchTST~\citep{nie2022time} and flatten $\Tilde{\mathbf{O}}^{i}$ into a 1D tensor with the length $P \times D$, which is then linear projected as $\Hat{\mathbf{Y}}^{i} \in \mathbb{R}^H$.
+}
+
+\subsection{Dataset Details}
+Dataset statistics are summarized in \shortautoref{tab:dataset}. \revision{We evaluate the long-term forecasting performance on the well-established eight different benchmarks, including four ETT datasets~\citep{zhou2021informer} (i.e., ETTh1, ETTh2, ETTm1, and ETTm2), Weather, Electricity, Traffic, and ILI from \citep{wu2022timesnet}. Furthermore, we evaluate the performance of short-term forecasting on the M4 benchmark~\citep{makridakis2018m4} and the quarterly dataset in the M3 benchmark~\citep{makridakis2000m3}.}
+
+\begin{table}[htbp]
+  % \vspace{-20pt}
+  \caption{\revision{Dataset statistics are from \citep{wu2022timesnet}. The dimension indicates the number of time series (i.e., channels), and the dataset size is organized in (training, validation, testing).}} \label{tab:dataset}
+  \centering
+   \resizebox{0.95\columnwidth}{!}{
+  \begin{threeparttable}
+  \begin{small}
+  \renewcommand{\multirowsetup}{\centering}
+  \setlength{\tabcolsep}{3.8pt}
+  \begin{tabular}{c|l|c|c|c|c|c}
+    \toprule
+    Tasks & Dataset & Dim. & Series Length & Dataset Size &Frequency  &\scalebox{1.0}{\revision{Domain}} \\
+    \toprule
+     & ETTm1 & 7 & \scalebox{0.8}{\{96, 192, 336, 720\}} & (34465, 11521, 11521)  & 15 min &\scalebox{1.0}{Temperature}\\
+    \cmidrule{2-7}
+    Long-term & ETTm2 & 7 & \scalebox{0.8}{\{96, 192, 336, 720\}} & (34465, 11521, 11521)  & 15 min &\scalebox{1.0}{Temperature}\\
+     \cmidrule{2-7}
+     Forecasting & ETTh1 & 7 & \scalebox{0.8}{\{96, 192, 336, 720\}} & (8545, 2881, 2881) & 1 hour &\scalebox{1.0}{Temperature} \\
+     \cmidrule{2-7}
+     &ETTh2 & 7 & \scalebox{0.8}{\{96, 192, 336, 720\}} & (8545, 2881, 2881) & 1 hour &\scalebox{1.0}{Temperature} \\ 
+     \cmidrule{2-7}
+     &\revision{Electricity} & \revision{321} & \revision{\scalebox{0.8}{\{96, 192, 336, 720\}}} & \revision{(18317, 2633, 5261)} & \revision{1 hour} &\scalebox{1.0}{\revision{Electricity}} \\ 
+     \cmidrule{2-7}
+     &\revision{Traffic} & \revision{862} & \revision{\scalebox{0.8}{\{96, 192, 336, 720\}}} & \revision{(12185, 1757, 3509)} & \revision{1 hour} &\scalebox{1.0}{\revision{Transportation}} \\ 
+     \cmidrule{2-7}
+     &\revision{Weather} & \revision{21} & \revision{\scalebox{0.8}{\{96, 192, 336, 720\}}} & \revision{(36792, 5271, 10540)} & \revision{10 min} &\scalebox{1.0}{\revision{Weather}} \\
+     \cmidrule{2-7}
+     &\revision{ILI} & \revision{7} & \revision{\scalebox{0.8}{\{24, 36, 48, 60\}}} & \revision{(617, 74, 170)} & \revision{1 week} &\scalebox{1.0}{\revision{Illness}} \\
+    \midrule
+    & \revision{M3-Quarterly} & \revision{1}& \revision{8}& \revision{(756, 0, 756)}&\revision{Quarterly}  & \revision{\scalebox{1.0}{Multiple}} \\
+    \cmidrule{2-7}
+    & M4-Yearly & 1 & 6 & (23000, 0, 23000) &Yearly  & \scalebox{1.0}{Demographic} \\
+    \cmidrule{2-7}
+    & M4-Quarterly & 1 & 8 & (24000, 0, 24000) &Quarterly  & \scalebox{1.0}{Finance} \\
+    \cmidrule{2-7}
+    Short-term & M4-Monthly & 1 & 18 & (48000, 0, 48000) & Monthly & \scalebox{1.0}{Industry} \\
+     \cmidrule{2-7}
+    Forecasting & M4-Weakly & 1 & 13 & (359, 0, 359) & Weakly & \scalebox{1.0}{Macro} \\
+     \cmidrule{2-7}
+     & M4-Daily & 1 & 14 & (4227, 0, 4227) &Daily  & \scalebox{1.0}{Micro} \\
+     \cmidrule{2-7}
+     & M4-Hourly & 1 &48 & (414, 0, 414) & Hourly  & \scalebox{1.0}{Other} \\
+    \bottomrule
+    \end{tabular}
+    \end{small}
+  \end{threeparttable}
+  }
+\end{table}
+
+The Electricity Transformer Temperature (ETT; An indicator reflective of long-term electric power deployment) benchmark is comprised of two years of data, sourced from two counties in China, and is subdivided into four distinct datasets, each with varying sampling rates: ETTh1 and ETTh2, which are sampled at a 1-hour level, and ETTm1 and ETTm2, which are sampled at a 15-minute level. Each entry within the ETT datasets includes six power load features and a target variable, termed ``oil temperature''.
+\revision{The Electricity dataset comprises records of electricity consumption from 321 customers, measured at a 1-hour sampling rate. The Weather dataset includes one-year records from 21 meteorological stations located in Germany, with a sampling rate of 10 minutes. The Traffic dataset includes data on the occupancy rates of the freeway system, recorded from 862 sensors across the State of California, with a sampling rate of 1 hour. The influenza-like illness (ILI) dataset contains records of patients experiencing severe influenza with complications.}
+
+The M4 benchmark comprises 100K time series, amassed from various domains commonly present in business, financial, and economic forecasting. These time series have been partitioned into six distinctive datasets, each with varying sampling frequencies that range from yearly to hourly.
+\revision{The M3-Quarterly dataset comprises 756 quarterly sampled time series in the M3 benchmark. These series are categorized into five different domains: demographic, micro, macro, industry, and finance.}
+
+\subsection{Evaluation Metrics}
+For evaluation metrics, we utilize the mean square error (MSE) and mean absolute error (MAE) for long-term forecasting. In terms of the short-term forecasting on M4 benchmark, we adopt the symmetric mean absolute percentage error (SMAPE), mean absolute scaled error (MASE), and overall weighted average (OWA) as in N-BEATS \citep{oreshkin2019n}. Note that OWA is a specific metric utilized in the M4 competition. The calculations of these metrics are as follows:
+\begin{align*} \label{equ:metrics}
+    \text{MSE} &= \frac{1}{H}\sum_{h=1}^T (\mathbf{Y}_{h} - \Hat{\mathbf{Y}}_{h})^2,
+    &
+    \text{MAE} &= \frac{1}{H}\sum_{h=1}^H|\mathbf{Y}_{h} - \Hat{\mathbf{Y}}_{h}|,\\
+    \text{SMAPE} &= \frac{200}{H} \sum_{h=1}^H \frac{|\mathbf{Y}_{h} - \Hat{\mathbf{Y}}_{h}|}{|\mathbf{Y}_{h}| + |\Hat{\mathbf{Y}}_{h}|},
+    &
+    \text{MAPE} &= \frac{100}{H} \sum_{h=1}^H \frac{|\mathbf{Y}_{h} - \Hat{\mathbf{Y}}_{h}|}{|\mathbf{Y}_{h}|}, \\
+    \text{MASE} &= \frac{1}{H} \sum_{h=1}^H \frac{|\mathbf{Y}_{h} - \Hat{\mathbf{Y}}_{h}|}{\frac{1}{H-s}\sum_{j=s+1}^{H}|\mathbf{Y}_j - \mathbf{Y}_{j-s}|},
+    &
+    \text{OWA} &= \frac{1}{2} \left[ \frac{\text{SMAPE}}{\text{SMAPE}_{\textrm{Naïve2}}}  + \frac{\text{MASE}}{\text{MASE}_{\textrm{Naïve2}}}  \right],
+\end{align*}
+where $s$ is the periodicity of the time series data. $H$ denotes the number of data points (i.e., prediction horizon in our cases). $\mathbf{Y}_{h}$ and $\Hat{\mathbf{Y}}_{h}$ are the $h$-th ground truth and prediction where $h \in \{1, \cdots, H\}$.
+
+
+\subsection{Model Configurations}\label{appx:model_config}
+The configurations of our models, relative to varied tasks and datasets, are consolidated in \shortautoref{tab:model_config}. By default, the Adam optimizer~\citep{KingmaB14adam} is employed throughout all experiments. Specifically, the quantity of text prototypes $V'$ is held constant at 100 and 1000 for short-term and long-term forecasting tasks, respectively. We utilize the Llama-7B model at full capacity, maintaining the backbone model layers at 32 across all tasks as a standard. The term input length $T$ signifies the number of time steps present in the original input time series data. Patch dimensions $d_m$ represent the hidden dimensions of the embedded time series patches prior to reprogramming. Lastly, heads $K$ correlate to the multi-head cross-attention utilized for patch reprogramming. In the four rightmost columns of \shortautoref{tab:model_config}, we detail the configurations related to model training.
+
+\begin{table}[htbp]
+\renewcommand\arraystretch{0.85}
+  \vspace{-2pt}
+  \caption{\revision{An overview of the experimental configurations for \method. ``LTF'' and ``STF'' denote long-term and short-term forecasting, respectively.}} 
+  \label{tab:model_config}
+  \vskip -0.05in
+  \centering
+   \resizebox{0.95\columnwidth}{!}{
+  \begin{threeparttable}
+  \begin{small}
+  \renewcommand{\multirowsetup}{\centering}
+  \setlength{\tabcolsep}{4.3pt}
+  \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+    \toprule
+    \multirow{2}{*}{Task-Dataset / Configuration} & \multicolumn{5}{c}{Model Hyperparameter} & \multicolumn{4}{c}{Training Process} \\
+    \cmidrule(lr){2-6}\cmidrule(lr){7-10}
+    & Text Prototype $V'$ & Backbone Layers & Input Length $T$ & Patch Dim. $d_{\text{m}}$ & Heads $K$ & LR$^\ast$ & Loss & Batch Size & Epochs \\
+    \toprule
+    LTF\ -\ ETTh1 & 1000 & 32 & 512 & 16 & 8 & $10^{-3}$ & MSE & 16 & 50 \\
+    \midrule
+    LTF\ -\ ETTh2 & 1000 & 32 & 512 & 16 & 8 & $10^{-3}$ & MSE & 16 & 50 \\
+    \midrule
+    LTF\ -\ ETTm1 & 1000 & 32 & 512 & 16 & 8 & $10^{-3}$ & MSE & 16 & 100 \\
+    \midrule
+    LTF\ -\ ETTm2 & 1000 & 32 & 512 & 16 & 8 & $10^{-3}$ & MSE & 16 & 100 \\
+    \midrule
+    LTF\ -\ Weather & 1000 & 32 & 512 & 16 & 8 & $10^{-2}$ & MSE & 8 & 100 \\
+    \midrule
+    LTF\ -\ Electricity & 1000 & 32 & 512 & 16 & 8 & $10^{-2}$ & MSE & 8 & 100 \\
+    \midrule
+    LTF\ -\ Traffic & 1000 & 32 & 512 & 16 & 8 & $10^{-2}$ & MSE & 8 & 100 \\
+    \midrule
+    LTF\ -\ ILI & 100 & 32 & 96 & 16 & 8 & $10^{-2}$ & MSE & 16 & 50 \\
+    \midrule
+    STF\ -\ M3-Quarterly & 100 & 32 & $2 \times H$ $^\dag$  & 32 & 8 & $10^{-4}$& SMAPE & 32 & 50 \\
+    \midrule
+    STF\ -\ M4 & 100 & 32 & $2 \times H$ $^\dag$  & 32 & 8 & $10^{-4}$ & SMAPE & 32 & 50 \\
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \footnotesize
+        \item[] $\dag$ $H$ represents the forecasting horizon of the M4 and M3 datasets.
+        \item[] $\ast$ LR means the initial learning rate.
+  \end{tablenotes}
+    \end{small}
+  \end{threeparttable}
+  \vspace{-5pt}
+  }
+\end{table}

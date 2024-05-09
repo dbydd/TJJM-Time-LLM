@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+  \captionsetup{font=small} 
+  \caption{\revision{Standard deviations of our approach and the second-best method (PatchTST) on all time series datasets for long-term forecasting.}}
+  \label{tab:errorbar_long}
+  % \vskip 0.05in
+  \centering
+  \begin{threeparttable}
+  \begin{small}
+  \scalebox{0.95}{
+  \renewcommand{\multirowsetup}{\centering}
+  \setlength{\tabcolsep}{5pt}
+  \begin{tabular}{l|cc|cc}
+    \toprule
+    Model & \multicolumn{2}{c|}{\method{}} & \multicolumn{2}{c}{PatchTST \citeyearpar{nie2022time}}  \\
+    \cmidrule(lr){0-1}\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    Dataset & MSE & MAE & MSE & MAE\\
+    \midrule
+    ETTh1 & $0.408 \pm 0.011$ & $0.423 \pm 0.012$ &$0.413 \pm 0.001$ &$0.430 \pm 0.002$  \\
+    ETTh2 & $0.334 \pm 0.005$ & $0.383 \pm 0.009$ & $0.330 \pm 0.002$ & $0.379 \pm 0.007$  \\
+    ETTm1 & $0.329 \pm 0.006$ & $0.372 \pm 0.007$ &$0.351 \pm 0.006$ & $0.380 \pm 0.002$ \\
+    ETTm2 & $0.251 \pm 0.002$ & $0.313 \pm 0.003$ &$0.255 \pm 0.003$ & $0.315 \pm 0.002$ \\
+    \revision{Weather} & $0.225 \pm 0.009$ & $0.257 \pm 0.008$ & $0.225 \pm 0.001$ & $0.264 \pm 0.001$  \\
+    \revision{Electricity} & $0.158 \pm 0.004$ & $0.252 \pm 0.007$ & $0.161 \pm 0.001$ & $0.252 \pm 0.001$  \\
+    \revision{Traffic} & $0.388 \pm 0.001$ & $0.264 \pm 0.006$ & $0.390 \pm 0.003$ & $0.263 \pm 0.003$  \\
+    \revision{ILI} & $1.435 \pm 0.011$ & $0.801 \pm 0.008$ & $1.443 \pm 0.012$ & $0.797 \pm 0.002 $  \\
+    \bottomrule
+  \end{tabular}
+  }
+    \end{small}
+  \end{threeparttable}
+\end{table}

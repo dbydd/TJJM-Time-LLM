@@ -1,0 +1,32 @@
+\begin{table}[t]
+\captionsetup{font=small} 
+\caption{Efficiency analysis of \method on ETTh1 in forecasting different steps ahead.}
+\label{tab:efficiency}
+\vspace{-4mm}
+\begin{center}
+\begin{small}
+\scalebox{0.55}{
+\setlength\tabcolsep{3pt}
+\begin{tabular}{l|ccc|ccc|ccc|ccc}
+\toprule
+
+Length &\multicolumn{3}{c|}{ETTh1-96}&\multicolumn{3}{c|}{ETTh1-192}&\multicolumn{3}{c|}{ETTh1-336}&\multicolumn{3}{c}{ETTh1-512}\\
+
+\midrule
+
+Metric &Param. (M) & Mem. (MiB)  &Speed(s/iter) &Param. (M) &Mem. (MiB)  &Speed(s/iter) &Param. (M) &Mem. (MiB)  &Speed(s/iter) &Param. (M) &Mem.(MiB)  &Speed(s/iter)\\
+\midrule
+
+\textbf{D.1} LLama (32) &3404.53 &32136	&0.517	&3404.57  &33762	&0.582	&3404.62  &37988	&0.632	&3404.69 &39004	&0.697 \\
+
+\textbf{D.2} LLama (8)	& 975.83 & 11370 &0.184	&975.87  &12392	&0.192	&975.92 &13188	&0.203	&976.11 &13616	&0.217 \\
+
+\textbf{D.3} w/o LLM	& 6.39 & 3678	&0.046	&6.42 &3812	&0.087	&6.48 &3960	&0.093	&6.55 &4176	&0.129\\
+
+\bottomrule
+\end{tabular}
+}
+\end{small}
+\end{center}
+\vskip -0.2in
+\end{table}

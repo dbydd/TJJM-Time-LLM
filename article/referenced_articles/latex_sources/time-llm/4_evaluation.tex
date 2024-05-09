@@ -1,0 +1,78 @@
+\method consistently outperforms state-of-the-art forecasting methods by large margins across multiple benchmarks and settings, especially in few-shot and zero-shot scenarios. We compared our approach against a broad collection of up-to-date models, including a recent study that fine-tunes language model for time series analysis~\citep{zhou2023one}. To ensure a fair comparison, we adhere to the experimental configurations in \citep{wu2022timesnet} across all baselines with a unified evaluation pipeline\footnote{https://github.com/thuml/Time-Series-Library}. We use Llama-7B~\citep{touvron2023llama} as the default backbone unless stated otherwise.
+
+\noindent\textbf{Baselines.}
+We compare with the SOTA time series models, and we cite their performance from \citep{zhou2023one} if applicable. Our baselines include a series of Transformer-based methods: PatchTST~\citeyearpar{nie2022time}, ESTformer~\citeyearpar{woo2022etsformer}, Non-Stationary Transformer~\citeyearpar{liu2022non}, FEDformer~\citeyearpar{zhou2022fedformer}, Autoformer~\citeyearpar{wu2021autoformer}, Informer~\citeyearpar{zhou2021informer}, and Reformer~\citeyearpar{kitaev2020reformer}. We also select a set of recent competitive models, including GPT4TS~\citeyearpar{zhou2023one}, \revision{LLMTime~\citeyearpar{gruver2023large},} DLinear~\citeyearpar{zeng2023transformers}, TimesNet~\citeyearpar{wu2022timesnet}, and LightTS~\citeyearpar{zhang2022less}. In short-term forecasting, we further compare our model with N-HiTS~\citeyearpar{challu2023nhits} and N-BEATS~\citeyearpar{oreshkin2019n}. More details are in \shortautoref{appx:related_work}.
+
+\vspace{-2mm}
+\subsection{Long-term Forecasting} \label{sec:long-term-forecasting}
+\vspace{-2mm}
+
+\noindent\textbf{Setups.} 
+\revision{We evaluate on ETTh1, ETTh2, ETTm1, ETTm2, Weather, Electricity (ECL), Traffic, and ILI, which have been extensively adopted for benchmarking long-term forecasting models~\citep{wu2022timesnet}.}
+Details of the implementation and datasets can be found in \shortautoref{appx:experiment_details}. The input time series length $T$ is set as 512, and we use four different prediction horizons $H \in \{96, 192, 336, 720\}$. The evaluation metrics include mean square error (MSE) and mean absolute error (MAE).
+
+\noindent\textbf{Results.} 
+\revision{Our brief results are shown in \shortautoref{tab:long-term-forecasting}}, where \method outperforms all baselines in most cases and significantly so to the majority of them. The comparison with GPT4TS~\citep{zhou2023one} is particularly noteworthy. GPT4TS is a very recent work that involves fine-tuning on the backbone language model. We note average performance gains of \revision{\textbf{12\%} and \textbf{20\%}} over GPT4TS and TimesNet, respectively. When compared with the SOTA task-specific Transformer model PatchTST, by reprogramming the smallest Llama, \method realizes an average MSE reduction of \revision{1.4\%}. Relative to the other models, e.g., DLinear, our improvements are also pronounced, exceeding \revision{\textbf{12\%}}.
+
+\input{tables/long-term-forecasting}
+
+\subsection{Short-term Forecasting}
+\vspace{-2mm}
+\input{tables/short-term-forecasting-brief}
+
+\noindent\textbf{Setups.} We choose the M4 benchmark~\citep{makridakis2018m4} as the testbed, which contains a collection of marketing data in different sampling frequencies. More details are provided in \shortautoref{appx:experiment_details}. The prediction horizons in this case are relatively small and in $[6,48]$. The input lengths are twice as prediction horizons. The evaluation metrics are symmetric mean absolute percentage error (SMAPE), mean absolute scaled error (MSAE), and overall weighted average (OWA). 
+
+\noindent\textbf{Results.} Our brief results with unified seeds across all methods are in \shortautoref{tab:short-term-forecasting-brief}. \method consistently surpasses all baselines, outperforming GPT4TS by \textbf{8.7\%}. \method remains competitive even when compared with the SOTA model, N-HiTS~\citep{challu2023nhits} , w.r.t. MASE and OWA.
+
+\subsection{Few-shot Forecasting}
+\vspace{-2mm}
+\noindent\textbf{Setups.} LLMs have recently demonstrated remarkable few-shot learning capabilities~\citep{liu2023large}. In this section, we assess whether our reprogrammed LLM retains this ability in forecasting tasks. We adhere to the setups in \citep{zhou2023one} for fair comparisons, and we evaluate on scenarios with limited training data (i.e., $\leq\ \text{first}\ 10\%$ training time steps).
+
+\input{tables/few-shot-forecasting-part1}
+
+\input{tables/few-shot-forecasting-part2}
+
+\noindent\textbf{Results.}
+\revision{Our brief 10\% and 5\% few-shot learning results are in \shortautoref{tab:few-shot-forecasting-10per} and \shortautoref{tab:few-shot-forecasting-5per} respectively.} 
+\method remarkably excels over all baseline methods, and we attribute this to the successful knowledge activation in our reprogrammed LLM. Interestingly, both our approach and GPT4TS consistently surpass other competitive baselines, further underscoring the potential prowess of language models as proficient time series machines.
+
+In the realm of 10\% few-shot learning, our methodology realizes a \revision{\textbf{5\%}} MSE reduction in comparison to GPT4TS, without necessitating any fine-tuning on the LLM. In relation to recent SOTA models such as PatchTST, DLinear, and TimesNet, our average enhancements surpass \revision{\textbf{8\%}}, \revision{\textbf{12\%}}, and \revision{\textbf{33\%}} w.r.t. MSE. Analogous trends are discernible in the 5\% few-shot learning scenarios, where our average advancement over GPT4TS exceeds \revision{\textbf{5\%}}. When compared with PatchTST, DLinear, and TimesNet, \method manifests a striking average improvement of over \revision{\textbf{20\%}}.
+
+% \vspace{-1mm}
+\subsection{Zero-shot Forecasting}
+\input{tables/zero-shot-forecasting-brief}
+% \vspace{-2mm}
+\paragraph{Setups.} Beyond few-shot learning, LLMs hold potential as effective zero-shot reasoners~\citep{kojima2205large}. In this section, we evaluate the zero-shot learning capabilities of the reprogrammed LLM within the framework of cross-domain adaptation.  Specifically, we examine how well a model performs on a dataset $\clubsuit$ when it is optimized on another dataset $\spadesuit$, where the model has not encountered any data samples from the dataset $\clubsuit$. Similar to few-shot learning, we use long-term forecasting protocol and evaluate on various cross-domain scenarios utilizing the ETT datasets.
+
+\noindent\textbf{Results.} Our brief results are in \shortautoref{tab:zero-shot-forecasting-brief}. 
+\method consistently outperforms the most competitive baselines by a large margin, over \textbf{14.2\%} w.r.t. the second-best in MSE reduction. Considering the few-shot results, we observe that reprogramming an LLM tends to yield significantly better results in data scarcity scenarios. For example, our overall error reductions w.r.t. GPT4TS in 10\% few-shot forecasting, 5\% few-shot forecasting, and zero-shot forecasting are increasing gradually: \textbf{7.7\%}, \textbf{8.4\%}, and \textbf{22\%}. 
+\revision{Even when benchmarked against LLMTime, the most recent approach in this field, with the backbone LLM of comparable size (7B), \method shows a substantial improvement exceeding \textbf{75\%}.}
+We attribute this to our approach being better at activating the LLM's knowledge transfer and reasoning capabilities in a resource-efficient manner when performing time series tasks.
+
+\vspace{-2mm}
+\subsection{Model Analysis}\label{sec:model_analysis}
+\vspace{-2mm}
+\noindent\textbf{Language Model Variants.}
+We compare two representative backbones with varying capacities (\textbf{A.1-4} in \shortautoref{tab:ablations}). Our results indicate that the scaling law retain after the LLM reprogramming. We adopt Llama-7B by default in its full capacity, which manifestly outperforms its 1/4 capacity variant (\textbf{A.2}; inclusive of the first 8 Transformer layers) by \textbf{14.5\%}. An average MSE reduction of \textbf{14.7\%} is observed over GPT-2 (\textbf{A.3}), which slightly outperforms its variant GPT-2 (6) (\textbf{A.4}) by 2.7\%.
+
+\noindent\textbf{Cross-modality Alignment.}
+Our results in \shortautoref{tab:ablations} indicate that ablating either patch reprogramming or Prompt-as-Prefix hurts knowledge transfer in reprogramming the LLM for effective time series forecasting. In the absence of representation alignment (\textbf{B.1}), we observe a notable average performance degradation of \textbf{9.2\%}, which becomes more pronounced (exceeding \textbf{17\%}) in few-shot tasks. In \method, the act of prompting stands as a pivotal element in harnessing the LLM's capacity for understanding the inputs and tasks. Ablation of this component (\textbf{B.2}) results in over \textbf{8\%} and \textbf{19\%} degradation in standard and few-shot forecasting tasks, respectively. We find that removing the input statistics (\textbf{C.1}) hurts the most, resulting in an average increase of \textbf{10.2\%} MSE. This is anticipated as external knowledge can be naturally incorporated via prompting to facilitate the learning and inference. Additionally, providing the LLM with clear task instructions and input context (e.g., dataset captioning) is also beneficial (i.e., \textbf{C.2} and \textbf{C.1}; eliciting over \textbf{7.7\%} and \textbf{9.6\%}, respectively).
+
+\input{tables/ablation-study}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+\vspace{-3.6mm}
+\centering
+\includegraphics[width=7cm]{figures/reprogramming-showcase-v3.pdf}
+\caption{A showcase of patch reprogramming.}
+\label{fig:reprogramming_showcase}
+\vspace{-4mm}
+\end{wrapfigure}
+
+\noindent\textbf{Reprogramming Interpretation.}
+We provide a case study on ETTh1 of reprogramming 48 time series patches with 100 text prototypes in \shortautoref{fig:reprogramming_showcase}. The top 4 subplots visualize the optimization of reprogramming space from randomly-initialized \textbf{(a)} to well-optimized \textbf{(d)}. We find only a small set of prototypes (columns) participated in reprogramming the input patches (rows) in subplot \textbf{(e)}. Also, patches undergo different representations through varying combinations of prototypes. This indicates: (1) text prototypes learn to summarize language cues, and a select few are highly relevant for representing information in local time series patches, which we visualize by randomly selecting 10 in subplot \textbf{(f)}. Our results suggest a high relevance to the words that describe time series properties (i.e., word sets 1 and 2); (2) patches usually have different underlying semantics, necessitating different prototypes to represent.
+
+\noindent\textbf{Reprogramming Efficiency.}
+\shortautoref{tab:efficiency} provides an overall efficiency analysis of \method with and without the backbone LLM. Our proposed reprogramming network itself (\textbf{D.3}) is lightweight in activating the LLM's ability for time series forecasting (i.e., fewer than 6.6 million \textit{trainable} parameters; only around \textbf{0.2\%} of the total parameters in Llama-7B), and the overall efficiency of \method is actually capped by the leveraged backbones (e.g., \textbf{D.1} and \textbf{D.2}). This is favorable even compared to the parameter-efficient fine-tuning methods (e.g., QLoRA~\citep{dettmers2023qlora}) in balancing task performance and efficiency.
+
+\input{tables/reprogramming_efficiency}

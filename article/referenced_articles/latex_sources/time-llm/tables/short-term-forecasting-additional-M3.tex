@@ -1,0 +1,31 @@
+\begin{table}[h]
+\renewcommand\arraystretch{1.2}
+% \vskip -0.15in
+\captionsetup{font=small} 
+\caption{\revision{Additional short-term time series forecasting results on M3 (Quarterly). The forecasting horizon is 8. A lower value indicates better performance. \boldres{Red}: the best, \secondres{Blue}: the second best.}}
+\label{tab:short-term-forecasting-M3}
+\vspace{-4mm}
+\begin{center}
+\begin{small}
+\scalebox{0.7}{
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{cc|cccccccccccccc}
+\toprule
+
+\multicolumn{2}{c|}{\revision{Methods}}& \revision{\method} &\revision{GPT4TS} &\revision{TimesNet} &\revision{PatchTST} &\revision{N-HiTS} &\revision{N-BEATS} &\revision{DLinear} &\revision{FEDformer} \\
+
+\midrule
+
+\multirow{3}{*}{}
+&\revision{SMAPE} &\secondres{11.171} &14.453 &\boldres{10.410}&12.380 &12.616&18.640 &15.028&12.927 \\
+&\revision{MRAE} &3.282&5.035 &3.310&\boldres{2.401} &4.271 &4.612 &\secondres{2.793} &3.653 \\
+&\revision{MAPE} &\secondres{0.151} &0.203&\boldres{0.140}&0.154 &0.168&0.247 &0.196 &0.174\\
+
+\bottomrule
+
+\end{tabular}
+}
+\end{small}
+\end{center}
+% \vskip -0.15in
+\end{table}

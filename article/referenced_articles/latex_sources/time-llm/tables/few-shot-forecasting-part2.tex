@@ -1,0 +1,65 @@
+\begin{table}[h!]
+\renewcommand\arraystretch{1.2}
+\captionsetup{font=small} 
+\caption{\revision{Few-shot learning on 5\% training data. We use the same protocol in \shortautoref{tab:long-term-forecasting}. All results are averaged from four different forecasting horizons:  $H \in \{96, 192, 336, 720\}$. Our full results are in \shortautoref{appx:zero-shot}.}}
+\label{tab:few-shot-forecasting-5per}
+\vspace{-3mm}
+% \vskip -0.15in
+\begin{center}
+\begin{small}
+\scalebox{0.60}{
+\setlength\tabcolsep{3pt}
+\begin{tabular}{c|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc}
+\toprule
+
+\multicolumn{1}{c|}{\multirow{2}{*}{Methods}}
+&\multicolumn{2}{c|}{\method{}} &\multicolumn{2}{c|}{GPT4TS} &\multicolumn{2}{c|}{DLinear} &\multicolumn{2}{c|}{PatchTST} &\multicolumn{2}{c|}{TimesNet }&\multicolumn{2}{c|}{FEDformer} &\multicolumn{2}{c|}{Autoformer} &\multicolumn{2}{c|}{Stationary} &\multicolumn{2}{c|}{ETSformer} &\multicolumn{2}{c|}{LightTS} &\multicolumn{2}{c|}{Informer} &\multicolumn{2}{c}{Reformer} \\
+
+\multicolumn{1}{c|}{} & \multicolumn{2}{c}{\scalebox{0.99}{(\textbf{Ours})}} & 
+\multicolumn{2}{|c|}{\scalebox{0.99}{\citeyearpar{zhou2023one}}} &
+\multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{zeng2023transformers}}} &
+\multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{nie2022time}}} & \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{wu2022timesnet}}} & \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{zhou2022fedformer}}} & \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{wu2021autoformer}}} & \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{liu2022non}}} &  \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{woo2022etsformer}}} & \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{zhang2022less}}}  & \multicolumn{2}{c|}{\scalebox{0.99}{\citeyearpar{zhou2021informer}}} & \multicolumn{2}{c}{\scalebox{0.99}{\citeyearpar{kitaev2020reformer}}}  \\
+
+\midrule
+
+\multicolumn{1}{c|}{Metric} & MSE  & MAE & MSE & MAE& MSE & MAE& MSE  & MAE& MSE  & MAE& MSE  & MAE& MSE  & MAE& MSE  & MAE& MSE  & MAE& MSE  & MAE& MSE  & MAE& MSE  & MAE\\
+\midrule
+
+\multirow{1}{*}{\rotatebox{0}{$ETTh1$}}
+&\boldres{0.627} &\boldres{0.543}&0.681&\secondres{0.560}&0.750&0.611&0.694&0.569&0.925&0.647&\secondres{0.658}&0.562&0.722&0.598&0.943&0.646&1.189&0.839&1.451&0.903&1.225&0.817&1.241&0.835\\
+\midrule
+
+
+\multirow{1}{*}{\rotatebox{0}{$ETTh2$}}
+&\boldres{0.382} &\boldres{0.418} &\secondres{0.400}&\secondres{0.433}&0.694&0.577&0.827&0.615&0.439&0.448&0.463&0.454&0.441&0.457&0.470&0.489&0.809&0.681&3.206&1.268&3.922&1.653&3.527&1.472\\
+\midrule
+
+\multirow{1}{*}{\rotatebox{0}{$ETTm1$}}
+&\secondres{0.425} &\secondres{0.434} &0.472&0.450&\boldres{0.400}&\boldres{0.417}&0.526&0.476&0.717&0.561&0.730&0.592&0.796&0.620&0.857&0.598&1.125&0.782&1.123&0.765&1.163&0.791&1.264&0.826\\
+\midrule
+
+\multirow{1}{*}{\rotatebox{0}{$ETTm2$}}
+&\boldres{0.274} &\boldres{0.323}&\secondres{0.308}&\secondres{0.346}&0.399&0.426&0.314&0.352&0.344&0.372&0.381&0.404&0.388&0.433&0.341&0.372&0.534&0.547&1.415&0.871&3.658&1.489&3.581&1.487\\
+\midrule
+
+\multirow{1}{*}{\rotatebox{0}{\revision{$Weather$}}}
+&\boldres{0.260} &0.309 &\secondres{0.263} &\boldres{0.301} &0.263 &0.308 &0.269 &\secondres{0.303} &0.298 &0.318 &0.309 &0.353 &0.310 &0.353 &0.327 &0.328 &0.333 &0.371 &0.305 &0.345 &0.584 &0.527 &0.447 &0.453 \\
+\midrule
+
+\multirow{1}{*}{\rotatebox{0}{\revision{$ECL$}}}
+&\secondres{0.179} &\boldres{0.268} &\boldres{0.178} &\secondres{0.273} &0.176 &0.275 &0.181 &0.277 &0.402 &0.453 &0.266 &0.353 &0.346 &0.404 &0.627 &0.603 &0.800 &0.685 &0.878 &0.725 &1.281 &0.929 &1.289 &0.904 \\
+\midrule
+
+\multirow{1}{*}{\rotatebox{0}{\revision{$Traffic$}}}
+&\secondres{0.423} &\secondres{0.298} &0.434 &0.305 &0.450 &0.317 &\boldres{0.418} &\boldres{0.296} &0.867 &0.493 &0.676 &0.423 &0.833 &0.502 &1.526 &0.839 &1.859 &0.927 &1.557 &0.795 &1.591 &0.832 &1.618 &0.851 \\
+\midrule
+
+\multicolumn{1}{c|}{$1^{\text{st}}$Count}&\multicolumn{2}{c|}{\boldres{5}}&\multicolumn{2}{c|}{\secondres{2}}&\multicolumn{2}{c|}{1}&\multicolumn{2}{c|}{1}&\multicolumn{2}{c|}{0}&\multicolumn{2}{c|}{0}&\multicolumn{2}{c|}{0}&\multicolumn{2}{c|}{0}&\multicolumn{2}{c|}{0}&\multicolumn{2}{c|}{0}&\multicolumn{2}{c|}{0}&\multicolumn{2}{c}{0}\\
+
+\bottomrule
+\end{tabular}
+}
+\end{small}
+\end{center}
+\vskip -0.2in
+\end{table}

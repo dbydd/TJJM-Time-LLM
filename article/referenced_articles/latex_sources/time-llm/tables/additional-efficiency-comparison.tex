@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\captionsetup{font=small} 
+\caption{Efficiency comparison between model reprogramming and parameter-efficient fine-tuning (PEFT) with QLoRA~\citep{dettmers2023qlora} on ETTh1 dataset in forecasting two different steps ahead.}
+\label{tab:additional_efficiency_comparison}
+\begin{center}
+\begin{small}
+\scalebox{0.85}{
+\setlength\tabcolsep{5pt}
+\begin{tabular}{c|l|ccc|ccc}
+\toprule
+\multicolumn{2}{c|}{Length} & \multicolumn{3}{c|}{ETTh1-96} & \multicolumn{3}{c}{ETTh1-336} \\
+\midrule
+\multicolumn{2}{c|}{Metric} & Trainable Param. (M) & Mem. (MiB) & Speed(s/iter) & Trainable Param. (M) & Mem. (MiB) & Speed(s/iter) \\
+\midrule
+\multirow{2}{*}{Llama (8)}    & QLoRA & 12.60 & 14767 & 0.237 & 12.69 & 15982 & 0.335 \\
+                          & Reprogram     & 5.62 & 11370 & 0.184 & 5.71 & 13188 & 0.203 \\
+\midrule
+\multirow{2}{*}{Llama (32)} & QLoRA & 50.29 & 45226 & 0.697 & 50.37 & 49374 & 0.732 \\
+                          & Reprogram        & 6.39 & 32136 & 0.517 & 6.48 & 37988 & 0.632 \\
+\bottomrule
+\end{tabular}
+}
+\end{small}
+\end{center}
+\end{table}

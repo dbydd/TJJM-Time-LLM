@@ -1,0 +1,17 @@
+% \vspace{-2mm}
+\revision{\section{Few-shot and Zero-shot Forecasting}\label{appx:zero-shot}}
+\vspace{-10mm}
+\revision{\subsection{Few-shot Forecasting}}
+\input{tables/few-shot-forecasting-part1-full}
+\input{tables/few-shot-forecasting-part2-full}
+\revision{
+Our full results in few-shot forecasting tasks are detailed in \shortautoref{tab:few-shot-forecasting-10per-full} and \shortautoref{tab:few-shot-forecasting-5per-full}. Within the scope of 10\% few-shot learning, \method secures SOTA performance in \textbf{32} out of 35 cases, spanning seven different time series benchmarks. Our approach's advantage becomes even more pronounced in the context of 5\% few-shot scenarios, achieving SOTA results in \textbf{21} out of 32 cases. We attribute this to the successful knowledge activation in our reprogrammed LLM.
+}
+
+\vspace{-8mm}
+\revision{\subsection{Zero-shot Forecasting}}
+The full results of zero-shot forecasting are summarized in \shortautoref{tab:zero-shot-forecasting}. \revision{\method remarkably surpasses the six most competitive time series models in zero-shot adaptation.} Overall, we observe over \textbf{23.5\%} and \textbf{12.4\%} MSE and MAE reductions across all baselines on average. Our improvements are consistently significant on those typical cross-domain scenarios (e.g., ETTh2 $\rightarrow$ ETTh1 and ETTm2 $\rightarrow$ ETTm1), over \textbf{20.8\%} and \textbf{11.3\%} on average w.r.t. MSE and MAE. 
+\revision{Significantly, \method exhibits superior performance gains in comparison to LLMTime~\citep{gruver2023large}, which employs a similarly sized backbone LLM (7B) and is the latest effort in leveraging LLMs for zero-shot time series forecasting.}
+We attribute this success to our reprogramming framework being better at activating the LLM's knowledge transfer and reasoning capabilities in a resource-efficient manner when performing time series tasks.
+
+\input{tables/zero-shot-forecasting}

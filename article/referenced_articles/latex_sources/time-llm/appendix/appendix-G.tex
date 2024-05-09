@@ -1,0 +1,8 @@
+\section{Efficiency Comparison with Model Fine-Tuning}
+
+
+\paragraph{Setups.} We compare the efficiency of model fine-tuning (with QLoRA~\cite{dettmers2023qlora}) and our proposed model reprogramming in this section with two different backbones, that is, Llama in 1/4 capacity (first 8 Transformer layers) and full capacity. Here, we adhere to the long-term forecasting protocol on ETTh1 to forecast two different steps (that is, 96 and 336 in this case) ahead. For the evaluation metrics, we report the total number of trainable parameters (in million), GPU memory (in mebibyte), and running time (seconds per iteration).
+
+\paragraph{Results.} Our results are given in \shortautoref{tab:additional_efficiency_comparison}. We see that model reprogramming remarkably results in better efficiency compared to parameter-efficient fine-tuning (PEFT) with QLoRA on long-range forecasting tasks in terms of the total number of trainable parameters, GPU memory overhead, and training speed. Quantitatively, there is an \textbf{71.2\%} trainable parameter reduction on average over four scenarios, leading to \textbf{23.1\%} smaller memory consumption and \textbf{25.3\%} faster training speed.
+
+\input{tables/additional-efficiency-comparison}

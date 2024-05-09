@@ -1,0 +1,91 @@
+\begin{table}[h]
+\captionsetup{font=small}
+\caption{\revision{Additional comparison with other baselines in long-term forecasting tasks. We set the forecasting horizons  $H \in \{24, 36, 48, 60\}$ for ILI and  $\{96, 192, 336, 720\}$ for the others. A lower value indicates better performance. {\boldres{Red}}: the best, \secondres{Blue}: the second best.}}
+\vspace{-2mm}
+\label{tab:long-term-forecasting-full-additional-baselines}
+\begin{center}
+\begin{small}
+\scalebox{0.60}{
+\setlength\tabcolsep{3pt}
+\begin{tabular}{c|c|cc|cc|cc|cc|cc|cc}
+\toprule
+
+\multicolumn{2}{c|}{Methods}&\multicolumn{2}{c|}{\method{}}&\multicolumn{2}{c|}{\revision{N-BEATS}}&\multicolumn{2}{c|}{\revision{N-HiTS}}&\multicolumn{2}{c|}{\revision{AutoARIMA}}&\multicolumn{2}{c|}{\revision{AutoTheta}} &\multicolumn{2}{c}{\revision{AutoETS}} \\
+
+\midrule
+
+\multicolumn{2}{c|}{Metric} & MSE  & MAE & \revision{MSE} & \revision{MAE}& \revision{MSE} & \revision{MAE}& \revision{MSE}  & \revision{MAE}& \revision{MSE}  & \revision{MAE}& \revision{MSE}  & \revision{MAE} \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$ETTh1$}}
+& 96  &\boldres{0.362} &\boldres{0.392} &0.496&0.475&\secondres{0.392}&\secondres{0.407}&0.933 &0.635 &1.266 &0.758 &1.264 &0.756 \\
+& 192 &\boldres{0.398} &\boldres{0.418} &0.544&0.504&\secondres{0.442}&\secondres{0.438}&0.868 &0.621 &1.188 &0.749 &1.181 &0.745 \\
+& 336 &\boldres{0.430} &\boldres{0.427} &0.592&0.533&\secondres{0.497}&\secondres{0.471}&0.964 &0.663 &1.310 &0.799 &1.292 &0.792 \\
+& 720 &\boldres{0.442} &\boldres{0.457} &0.639&0.588&\secondres{0.559}&\secondres{0.533}&1.043 &0.705 &1.510 &0.882 &1.405 &0.842 \\
+& Avg &\boldres{0.408} &\boldres{0.423} &0.568 &0.525 &\secondres{0.473} &\secondres{0.462} &0.952 &0.656 &1.319 &0.797 &1.286 &0.784 \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$ETTh2$}}
+& 96  &\boldres{0.268} &\boldres{0.328} &0.384&0.431&\secondres{0.321}&\secondres{0.368}&0.390 &0.417 &0.461 &0.430 &0.444 &0.403 \\
+& 192 &\boldres{0.329} &\boldres{0.375} &0.496&0.493&\secondres{0.398}&\secondres{0.421}&0.545 &0.492 &0.754 &0.537 &0.771 &0.461 \\
+& 336 &\boldres{0.368} &\boldres{0.409} &0.585&0.542&\secondres{0.453}&\secondres{0.459}&0.697 &0.562 &1.355 &0.683 &1.526 &0.522 \\
+& 720 &\boldres{0.372} &\boldres{0.420} &0.792&0.651&\secondres{0.775}&\secondres{0.609}&0.907 &0.658 &3.971 &1.061 &5.183 &0.633 \\
+& Avg &\boldres{0.334} &\boldres{0.383} &0.564 &0.529 &\secondres{0.487} &\secondres{0.464} &0.635 &0.532 &1.635 &0.678 &1.981 &0.505 \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$ETTm1$}}
+& 96  &\boldres{0.272} &\boldres{0.334} &0.393&0.412&\secondres{0.327}&\secondres{0.368}&1.091 &0.661 &1.211 &0.704 &1.519 &0.768 \\
+& 192 &\boldres{0.310} &\boldres{0.358} &0.425&0.427&\secondres{0.376}&\secondres{0.400}&1.119 &0.682 &1.237 &0.724 &1.535 &0.784 \\
+& 336 &\boldres{0.352} &\boldres{0.384} &0.464&0.454&\secondres{0.407}&\secondres{0.423}&1.125 &0.698 &1.231 &0.735 &1.472 &0.782 \\
+& 720 &\boldres{0.383} &\boldres{0.411} &0.521&0.488&\secondres{0.471}&\secondres{0.456}&1.243 &0.745 &1.394 &0.801 &1.591 &0.825 \\
+& Avg &\boldres{0.329} &\boldres{0.372} &0.451 &0.445 &\secondres{0.395} &\secondres{0.412} &1.145 &0.697 &1.268 &0.741 &1.529 &0.790 \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$ETTm2$}}
+& 96  &\boldres{0.161} &\boldres{0.253} &0.204&0.302&\secondres{0.188}&\secondres{0.273}&0.435 &0.375 &0.245 &0.316 &0.359 &0.333 \\
+& 192 &\boldres{0.219} &\boldres{0.293} &0.282&0.358&\secondres{0.274}&\secondres{0.338}&0.995 &0.494 &0.413 &0.401 &0.756 &0.396 \\
+& 336 &\boldres{0.271} &\boldres{0.329} &\secondres{0.378}&0.425&0.384&\secondres{0.406}&2.324 &0.648 &0.790 &0.528 &1.747 &0.467 \\
+& 720 &\boldres{0.352} &\boldres{0.379} &0.555&0.523&\secondres{0.501}&\secondres{0.488}&9.064 &1.020 &2.451 &0.847 &6.856 &0.639 \\
+& Avg &\boldres{0.251} &\boldres{0.313} &0.355 &0.402 &\secondres{0.337} &\secondres{0.376} &3.205 &0.634 &0.975 &0.523 &2.430 &0.459 \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$\revision{Weather}$}}
+& \revision{96}  &\boldres{0.147} &\boldres{0.201} &0.185&0.244&\secondres{0.160}&\secondres{0.222}&0.255 &0.273 &0.279 &0.266 &0.331 &0.277 \\
+& \revision{192}  &\boldres{0.189} &\boldres{0.234} &0.225&0.282&\secondres{0.202}&\secondres{0.265}&0.390 &0.353 &0.337 &0.316 &0.498 &0.345 \\
+& \revision{336}  &\secondres{0.262} &\boldres{0.279} &0.274&0.323&\boldres{0.253}&\secondres{0.303}&0.775 &0.457 &0.472 &0.385 &0.898 &0.423 \\
+& \revision{720}  &\boldres{0.304} &\boldres{0.316} &0.340&0.373&\secondres{0.323}&\secondres{0.354}&2.898 &0.707 &0.818 &0.526 &2.820 &0.580 \\
+& \revision{Avg}  &\boldres{0.225} &\boldres{0.257} &0.256 &0.306 &\secondres{0.235} &\secondres{0.286} &1.080 &0.448 &0.477 &0.373 &1.137 &0.406 \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$\revision{Electricity}$}}
+& \revision{96}  &\boldres{0.131} &\boldres{0.224} &0.233&0.327&\secondres{0.184}&\secondres{0.275}&0.520 &0.466 &0.653 &0.532 &0.650 &0.526 \\
+& \revision{192}  &\boldres{0.152} &\boldres{0.241} &0.246&0.340&\secondres{0.190}&\secondres{0.282}&0.581 &0.499 &0.713 &0.561 &0.704 &0.549 \\
+& \revision{336}  &\boldres{0.160} &\boldres{0.248} &0.262&0.355&\secondres{0.205}&\secondres{0.298}&0.602 &0.515 &0.797 &0.603 &0.766 &0.577 \\
+& \revision{720}  &\boldres{0.192} &\boldres{0.298} &0.296&0.383&\secondres{0.239}&\secondres{0.330}&0.685 &0.558 &1.023 &0.688 &0.901 &0.628 \\
+& \revision{Avg}  &\boldres{0.158} &\boldres{0.252} &0.259 &0.351 &\secondres{0.205} &\secondres{0.296} &0.597 &0.510 &0.797 &0.596 &0.755 &0.570 \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$\revision{Traffic}$}}
+& \revision{96}  &\boldres{0.362} &\boldres{0.248} &0.608&0.447&\secondres{0.410}&\secondres{0.329}&1.068 &0.694 &3.207 &1.219 &3.254 &1.221 \\
+& \revision{192}  &\boldres{0.374} &\boldres{0.247} &0.605&0.448&\secondres{0.414}&\secondres{0.330}&1.380 &0.775 &3.407 &1.262 &3.569 &1.264 \\
+& \revision{336}  &\boldres{0.385} &\boldres{0.271} &0.618&0.454&\secondres{0.428}&\secondres{0.337}&1.448 &0.790 &3.473 &1.274 &3.971 &1.275 \\
+& \revision{720}  &\boldres{0.430} &\boldres{0.288} &0.650&0.467&\secondres{0.456}&\secondres{0.354}&1.481 &0.799 &3.952 &1.382 &6.784 &1.379 \\
+& \revision{Avg}  &\boldres{0.388} &\boldres{0.264} &0.620 &0.454 &\secondres{0.427} &\secondres{0.338} &1.344 &0.765 &3.510 &1.284 &4.395 &1.285 \\
+\midrule
+
+\multirow{5}{*}{\rotatebox{90}{$\revision{ILI}$}}
+& \revision{24}  &\boldres{1.285} &\boldres{0.727} &6.809&1.870&\secondres{2.675}&\secondres{1.080}&4.909 &1.329 &5.991 &1.510 &4.869 &1.315 \\
+& \revision{36}  &\boldres{1.404} &\boldres{0.814} &6.850&1.890&\secondres{3.081}&\secondres{1.194}&5.079 &1.440 &5.922 &1.539 &4.917 &1.422 \\
+& \revision{48}  &\boldres{1.523} &\boldres{0.807} &6.788&1.876&\secondres{2.973}&\secondres{1.176}&4.276 &1.339 &4.637 &1.329 &3.966 &1.301 \\
+& \revision{60}  &\boldres{1.531} &\boldres{0.854} &6.908&1.893&\secondres{3.259}&\secondres{1.232}&3.855 &1.276 &4.378 &1.345 &3.540 &1.229 \\
+& \revision{Avg}  &\boldres{1.435} &\boldres{0.801} &6.839 &1.882 &\secondres{2.997} &\secondres{1.171} &4.530 &1.346 &5.232 &1.431 &4.323 &1.317 \\
+\midrule
+
+\multicolumn{2}{c|}{$1^{\text{st}}$Count} &\multicolumn{2}{c|}{\boldres{40}}&\multicolumn{2}{c|}{0} &\multicolumn{2}{c|}{\secondres{1}} &\multicolumn{2}{c|}{0} &\multicolumn{2}{c|}{0} &\multicolumn{2}{c}{0} \\
+
+\bottomrule
+\end{tabular}
+}
+\end{small}
+\end{center}
+\end{table}

@@ -1,0 +1,49 @@
+\begin{table}[h]
+\renewcommand\arraystretch{1.2}
+% \vskip -0.15in
+\captionsetup{font=small} 
+\caption{Short-term time series forecasting results on M4. The forecasting horizons are in [6, 48] and the three rows provided are weighted averaged from all datasets under different sampling intervals. A lower value indicates better performance. \boldres{Red}: the best, \secondres{Blue}: the second best. 
+\revision{More results are in \shortautoref{appx:short-term}.}
+}
+\label{tab:short-term-forecasting-brief}
+\vspace{-4mm}
+\begin{center}
+\begin{small}
+\scalebox{0.65}{
+\setlength\tabcolsep{2.5pt}
+\begin{tabular}{cc|cccccccccccccc}
+\toprule
+
+\multicolumn{2}{c|}{\multirow{2}{*}{Methods}}
+& \multicolumn{1}{c|}{\method{}} &\multicolumn{1}{c|}{GPT4TS}&\multicolumn{1}{c|}{TimesNet}&\multicolumn{1}{c|}{PatchTST}&\multicolumn{1}{c|}{N-HiTS}&\multicolumn{1}{c|}{N-BEATS}& \multicolumn{1}{c|}{ETSformer}& \multicolumn{1}{c|}{LightTS}& \multicolumn{1}{c|}{DLinear} &\multicolumn{1}{c|}{FEDformer} &\multicolumn{1}{c|}{Stationary} &\multicolumn{1}{c|}{Autoformer}  &\multicolumn{1}{c|}{Informer} &\multicolumn{1}{c}{Reformer} \\
+
+\multicolumn{2}{c|}{} & \multicolumn{1}{c}{\scalebox{0.99}{(\textbf{Ours})}} & 
+\multicolumn{1}{|c|}{\scalebox{0.99}{\citeyearpar{zhou2023one}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{wu2022timesnet}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{nie2022time}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{challu2023nhits}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{oreshkin2019n}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{woo2022etsformer}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{zhang2022less}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{zeng2023transformers}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{zhou2022fedformer}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{liu2022non}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{wu2021autoformer}}} &
+\multicolumn{1}{c|}{\scalebox{0.99}{\citeyearpar{zhou2021informer}}} &
+\multicolumn{1}{c}{\scalebox{0.99}{\citeyearpar{kitaev2020reformer}}} \\
+
+\midrule
+
+\multirow{3}{*}{\rotatebox{90}{Average}}
+&SMAPE &\boldres{11.983}&12.69 & 12.88&12.059& \secondres{12.035}& 12.25& 14.718& 13.525& 13.639 &13.16 &12.780 &12.909 &14.086 &18.200 \\
+&MASE &\boldres{1.595}& 1.808 & 1.836&1.623 & \secondres{1.625} & 1.698 &2.408 &2.111 &2.095 &1.775 &1.756 &1.771  &2.718 &4.223\\
+&OWA &\boldres{0.859}&0.94 & 0.955&\secondres{0.869} &\secondres{0.869} &0.896 &1.172 &1.051 &1.051 &0.949 &0.930 &0.939 & 1.230 & 1.775\\
+
+\bottomrule
+
+\end{tabular}
+}
+\end{small}
+\end{center}
+\vskip -0.15in
+\end{table}

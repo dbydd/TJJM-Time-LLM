@@ -1,0 +1,143 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\usepackage{enumitem}
+\setlist{leftmargin=5.5mm}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{caption}
+\usepackage{rotating}
+
+\newcommand{\icon}{\raisebox{-1pt}{\includegraphics[width=1.0em]{figures/logo.jpeg}}\xspace}
+\newcommand{\logo}{\raisebox{-1pt}{\includegraphics[width=2.0cm]{figures/logo.jpeg}}\xspace}
+
+\newcommand{\method}{\textsc{Time-LLM}\xspace}
+
+\newcommand*{\shortautoref}[1]{%
+  \begingroup
+    \def\sectionautorefname{Sec.}%
+    \def\subsectionautorefname{Sec.}%
+    \def\figureautorefname{Fig.}%
+    \def\tableautorefname{Tab.}%
+    \def\equationautorefname{Eq.}%
+    \autoref{#1}%
+  \endgroup
+}
+
+\tikzset{mycircled/.style={circle,draw,inner sep=0.05em,line width=0.04em, scale=0.8}}
+
+\newcommand{\update}[1]{{\textcolor{black}{#1}}}
+\newcommand{\boldres}[1]{{\textbf{\textcolor{red}{#1}}}}
+\newcommand{\secondres}[1]{{\underline{\textcolor{blue}{#1}}}}
+
+\definecolor{pink}{rgb}{1, 0, 0.5}
+\newcommand{\revision}[1]{{\textcolor{black}{#1}}}
+
+\title{\icon Time-LLM: Time Series Forecasting \\by Reprogramming Large Language Models}
+
+% Authors must not appear in the submitted version. They should be hidden
+% as long as the \iclrfinalcopy macro remains commented out below.
+% Non-anonymous submissions will be rejected without review.
+
+\author{%
+  Ming Jin$^{1}$\thanks{Equal Contribution},\ \ Shiyu Wang$^{2}$\footnotemark[1],\ \ Lintao Ma$^{2}$,\ \ Zhixuan Chu$^{2}$,\ \ James Y. Zhang$^{2}$,\ \ Xiaoming Shi$^{2}$, \\ \textbf{Pin-Yu Chen$^{3}$,\ \ Yuxuan Liang$^{6}$,\ \ Yuan-Fang Li$^{1}$,\ \ Shirui Pan$^{4}$\thanks{Corresponding Authors},\ \ Qingsong Wen$^{5}$\footnotemark[2]
+  } \vspace{1mm} \\
+  $^{1}$Monash University $^{2}$Ant Group $^{3}$IBM Research $^{4}$Griffith University $^{5}$Alibaba Group
+  \\ $^{6}$The Hong Kong University of Science and Technology (Guangzhou)  \vspace{1mm} \\
+  \texttt{\small \{ming.jin, yuanfang.li\}@monash.edu},\ \ \ \texttt{\small pin-yu.chen@ibm.com} \\
+  \texttt{\small yuxliang@outlook.com},\ \ \ \texttt{\small s.pan@griffith.edu.au},\ \ \  \texttt{\small qingsongedu@gmail.com} \\
+  \texttt{\small\{weiming.wsy,lintao.mlt,chuzhixuan.czx,james.z,peter.sxm\}@antgroup.com}
+}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+
+\begin{document}
+
+\maketitle
+
+\vspace{-2mm}
+\begin{abstract}
+\vspace{-2mm}
+Time series forecasting holds significant importance in many real-world dynamic systems and has been extensively studied. Unlike natural language process (NLP) and computer vision (CV), where a single large model can tackle multiple tasks, models for time series forecasting are often specialized, necessitating distinct designs for different tasks and applications. While pre-trained foundation models have made impressive strides in NLP and CV, their development in time series domains has been constrained by data sparsity. Recent studies have revealed that large language models (LLMs) possess robust pattern recognition and reasoning abilities over complex sequences of tokens. However, the challenge remains in effectively aligning the modalities of time series data and natural language to leverage these capabilities. In this work, we present \method, a reprogramming framework to repurpose LLMs for general time series forecasting with the backbone language models kept intact. We begin by reprogramming the input time series with text prototypes before feeding it into the frozen LLM to align the two modalities. To augment the LLM's ability to reason with time series data, we propose Prompt-as-Prefix (PaP), which enriches the input context and directs the transformation of reprogrammed input patches. The transformed time series patches from the LLM are finally projected to obtain the forecasts. Our comprehensive evaluations demonstrate that \method is a powerful time series learner that outperforms state-of-the-art, specialized forecasting models. Moreover, \method excels in both few-shot and zero-shot learning scenarios. The code is made available at \url{https://github.com/KimMeen/Time-LLM}
+\end{abstract}
+
+\vspace{-2mm}
+\section{Introduction}
+\vspace{-2mm}
+\input{1_introduction}
+
+\vspace{-1mm}
+\section{Related Work}
+\vspace{-2mm}
+\input{2_background}
+
+\vspace{-2mm}
+\section{Methodology}
+\vspace{-2mm}
+\input{3_methodology}
+
+\vspace{-2mm}
+\section{Main Results}
+\vspace{-2mm}
+\input{4_evaluation}
+
+\vspace{-2mm}
+\section{Conclusion and Future Work}
+\vspace{-2mm}
+\input{5_conclusion}
+
+% % \clearpage
+% % \newpage
+
+% \input{6_statements}
+
+% \clearpage
+% \newpage
+
+
+\bibliography{reference}
+\bibliographystyle{iclr2024_conference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\clearpage
+
+\appendix
+\input{appendix/appendix-A}
+\input{appendix/appendix-B}
+\input{appendix/appendix-C}
+\input{appendix/appendix-D}
+\input{appendix/appendix-E}
+\input{appendix/appendix-F}
+\input{appendix/appendix-G}
+\input{appendix/appendix-H}
+\input{appendix/appendix-I}
+
+\end{document}

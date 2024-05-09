@@ -1,0 +1,178 @@
+\begin{thebibliography}{34}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Das et~al.(2023)Das, Kong, Leach, Sen, and Yu]{das2023long}
+Das, A., Kong, W., Leach, A., Sen, R., and Yu, R.
+\newblock Long-term forecasting with tide: Time-series dense encoder.
+\newblock \emph{arXiv preprint arXiv:2304.08424}, 2023.
+
+\bibitem[Devlin et~al.(2018)Devlin, Chang, Lee, and Toutanova]{devlin2018bert}
+Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K.
+\newblock Bert: Pre-training of deep bidirectional transformers for language understanding.
+\newblock \emph{arXiv preprint arXiv:1810.04805}, 2018.
+
+\bibitem[Dong et~al.(2023)Dong, Wu, Zhang, Zhang, Wang, and Long]{dong2023simmtm}
+Dong, J., Wu, H., Zhang, H., Zhang, L., Wang, J., and Long, M.
+\newblock Simmtm: A simple pre-training framework for masked time-series modeling.
+\newblock In \emph{NeurIPS}, 2023.
+
+\bibitem[Kingma \& Ba(2014)Kingma and Ba]{kingma2014adam}
+Kingma, D.~P. and Ba, J.
+\newblock Adam: A method for stochastic optimization.
+\newblock \emph{arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem[Kornblith et~al.(2019)Kornblith, Norouzi, Lee, and Hinton]{kornblith2019similarity}
+Kornblith, S., Norouzi, M., Lee, H., and Hinton, G.
+\newblock Similarity of neural network representations revisited.
+\newblock In \emph{International conference on machine learning}, pp.\  3519--3529. PMLR, 2019.
+
+\bibitem[Lago et~al.(2021)Lago, Marcjasz, De~Schutter, and Weron]{lago2021forecasting}
+Lago, J., Marcjasz, G., De~Schutter, B., and Weron, R.
+\newblock Forecasting day-ahead electricity prices: A review of state-of-the-art algorithms, best practices and an open-access benchmark.
+\newblock \emph{Applied Energy}, 293:\penalty0 116983, 2021.
+
+\bibitem[Lai et~al.(2018)Lai, Chang, Yang, and Liu]{lai2018modeling}
+Lai, G., Chang, W.-C., Yang, Y., and Liu, H.
+\newblock Modeling long-and short-term temporal patterns with deep neural networks.
+\newblock In \emph{The 41st international ACM SIGIR conference on research \& development in information retrieval}, pp.\  95--104, 2018.
+
+\bibitem[Li et~al.(2021)Li, Selvaraju, Gotmare, Joty, Xiong, and Hoi]{li2021align}
+Li, J., Selvaraju, R., Gotmare, A., Joty, S., Xiong, C., and Hoi, S. C.~H.
+\newblock Align before fuse: Vision and language representation learning with momentum distillation.
+\newblock \emph{Advances in neural information processing systems}, 34:\penalty0 9694--9705, 2021.
+
+\bibitem[Li et~al.(2019)Li, Jin, Xuan, Zhou, Chen, Wang, and Yan]{li2019enhancing}
+Li, S., Jin, X., Xuan, Y., Zhou, X., Chen, W., Wang, Y.-X., and Yan, X.
+\newblock Enhancing the locality and breaking the memory bottleneck of transformer on time series forecasting.
+\newblock \emph{Advances in neural information processing systems}, 32, 2019.
+
+\bibitem[Li et~al.(2023)Li, Qi, Li, and Xu]{li2023revisiting}
+Li, Z., Qi, S., Li, Y., and Xu, Z.
+\newblock Revisiting long-term time series forecasting: An investigation on linear mapping.
+\newblock \emph{arXiv preprint arXiv:2305.10721}, 2023.
+
+\bibitem[Lim et~al.(2021)Lim, Ar{\i}k, Loeff, and Pfister]{lim2021temporal}
+Lim, B., Ar{\i}k, S.~{\"O}., Loeff, N., and Pfister, T.
+\newblock Temporal fusion transformers for interpretable multi-horizon time series forecasting.
+\newblock \emph{International Journal of Forecasting}, 37\penalty0 (4):\penalty0 1748--1764, 2021.
+
+\bibitem[Liu et~al.(2022{\natexlab{a}})Liu, Zeng, Chen, Xu, Lai, Ma, and Xu]{liu2022scinet}
+Liu, M., Zeng, A., Chen, M., Xu, Z., Lai, Q., Ma, L., and Xu, Q.
+\newblock Scinet: Time series modeling and forecasting with sample convolution and interaction.
+\newblock \emph{Advances in Neural Information Processing Systems}, 35:\penalty0 5816--5828, 2022{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2021{\natexlab{a}})Liu, Yu, Liao, Li, Lin, Liu, and Dustdar]{liu2021pyraformer}
+Liu, S., Yu, H., Liao, C., Li, J., Lin, W., Liu, A.~X., and Dustdar, S.
+\newblock Pyraformer: Low-complexity pyramidal attention for long-range time series modeling and forecasting.
+\newblock In \emph{International conference on learning representations}, 2021{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2022{\natexlab{b}})Liu, Wu, Wang, and Long]{liu2022non}
+Liu, Y., Wu, H., Wang, J., and Long, M.
+\newblock Non-stationary transformers: Exploring the stationarity in time series forecasting.
+\newblock 2022{\natexlab{b}}.
+
+\bibitem[Liu et~al.(2023)Liu, Hu, Zhang, Wu, Wang, Ma, and Long]{liu2023itransformer}
+Liu, Y., Hu, T., Zhang, H., Wu, H., Wang, S., Ma, L., and Long, M.
+\newblock itransformer: Inverted transformers are effective for time series forecasting.
+\newblock \emph{arXiv preprint arXiv:2310.06625}, 2023.
+
+\bibitem[Liu et~al.(2021{\natexlab{b}})Liu, Lin, Cao, Hu, Wei, Zhang, Lin, and Guo]{liu2021swin}
+Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., Lin, S., and Guo, B.
+\newblock Swin transformer: Hierarchical vision transformer using shifted windows.
+\newblock In \emph{Proceedings of the IEEE/CVF international conference on computer vision}, pp.\  10012--10022, 2021{\natexlab{b}}.
+
+\bibitem[Lv et~al.(2014)Lv, Duan, Kang, Li, and Wang]{lv2014traffic}
+Lv, Y., Duan, Y., Kang, W., Li, Z., and Wang, F.-Y.
+\newblock Traffic flow prediction with big data: A deep learning approach.
+\newblock \emph{IEEE Transactions on Intelligent Transportation Systems}, 16\penalty0 (2):\penalty0 865--873, 2014.
+
+\bibitem[Nie et~al.(2022)Nie, Nguyen, Sinthong, and Kalagnanam]{nie2022time}
+Nie, Y., Nguyen, N.~H., Sinthong, P., and Kalagnanam, J.
+\newblock A time series is worth 64 words: Long-term forecasting with transformers.
+\newblock \emph{arXiv preprint arXiv:2211.14730}, 2022.
+
+\bibitem[Olivares et~al.(2023)Olivares, Challu, Marcjasz, Weron, and Dubrawski]{olivares2023neural}
+Olivares, K.~G., Challu, C., Marcjasz, G., Weron, R., and Dubrawski, A.
+\newblock Neural basis expansion analysis with exogenous variables: Forecasting electricity prices with nbeatsx.
+\newblock \emph{International Journal of Forecasting}, 39\penalty0 (2):\penalty0 884--900, 2023.
+
+\bibitem[Oreshkin et~al.(2019)Oreshkin, Carpov, Chapados, and Bengio]{oreshkin2019n}
+Oreshkin, B.~N., Carpov, D., Chapados, N., and Bengio, Y.
+\newblock N-beats: Neural basis expansion analysis for interpretable time series forecasting.
+\newblock \emph{arXiv preprint arXiv:1905.10437}, 2019.
+
+\bibitem[Paszke et~al.(2019)Paszke, Gross, Massa, Lerer, Bradbury, Chanan, Killeen, Lin, Gimelshein, Antiga, et~al.]{paszke2019pytorch}
+Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen, T., Lin, Z., Gimelshein, N., Antiga, L., et~al.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock \emph{Advances in neural information processing systems}, 32, 2019.
+
+\bibitem[Salinas et~al.(2020)Salinas, Flunkert, Gasthaus, and Januschowski]{salinas2020deepar}
+Salinas, D., Flunkert, V., Gasthaus, J., and Januschowski, T.
+\newblock Deepar: Probabilistic forecasting with autoregressive recurrent networks.
+\newblock \emph{International Journal of Forecasting}, 36\penalty0 (3):\penalty0 1181--1191, 2020.
+
+\bibitem[Vagropoulos et~al.(2016)Vagropoulos, Chouliaras, Kardakos, Simoglou, and Bakirtzis]{vagropoulos2016comparison}
+Vagropoulos, S.~I., Chouliaras, G., Kardakos, E.~G., Simoglou, C.~K., and Bakirtzis, A.~G.
+\newblock Comparison of sarimax, sarima, modified sarima and ann-based models for short-term pv generation forecasting.
+\newblock In \emph{2016 IEEE international energy conference (ENERGYCON)}, pp.\  1--6. IEEE, 2016.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N., Kaiser, {\L}., and Polosukhin, I.
+\newblock Attention is all you need.
+\newblock \emph{Advances in neural information processing systems}, 30, 2017.
+
+\bibitem[Weron(2014)]{weron2014electricity}
+Weron, R.
+\newblock Electricity price forecasting: A review of the state-of-the-art with a look into the future.
+\newblock \emph{International journal of forecasting}, 30\penalty0 (4):\penalty0 1030--1081, 2014.
+
+\bibitem[Williams(2001)]{williams2001multivariate}
+Williams, B.~M.
+\newblock Multivariate vehicular traffic flow prediction: evaluation of arimax modeling.
+\newblock \emph{Transportation Research Record}, 1776\penalty0 (1):\penalty0 194--200, 2001.
+
+\bibitem[Wu et~al.(2021)Wu, Xu, Wang, and Long]{wu2021autoformer}
+Wu, H., Xu, J., Wang, J., and Long, M.
+\newblock Autoformer: Decomposition transformers with auto-correlation for long-term series forecasting.
+\newblock \emph{Advances in Neural Information Processing Systems}, 34:\penalty0 22419--22430, 2021.
+
+\bibitem[Wu et~al.(2023{\natexlab{a}})Wu, Hu, Liu, Zhou, Wang, and Long]{wu2023timesnet}
+Wu, H., Hu, T., Liu, Y., Zhou, H., Wang, J., and Long, M.
+\newblock Timesnet: Temporal 2d-variation modeling for general time series analysis.
+\newblock In \emph{International Conference on Learning Representations}, 2023{\natexlab{a}}.
+
+\bibitem[Wu et~al.(2023{\natexlab{b}})Wu, Zhou, Long, and Wang]{wu2023interpretable}
+Wu, H., Zhou, H., Long, M., and Wang, J.
+\newblock Interpretable weather forecasting for worldwide stations with a unified deep model.
+\newblock \emph{Nature Machine Intelligence}, pp.\  1--10, 2023{\natexlab{b}}.
+
+\bibitem[Zeng et~al.(2023)Zeng, Chen, Zhang, and Xu]{zeng2023transformers}
+Zeng, A., Chen, M., Zhang, L., and Xu, Q.
+\newblock Are transformers effective for time series forecasting?
+\newblock In \emph{Proceedings of the AAAI conference on artificial intelligence}, volume~37, pp.\  11121--11128, 2023.
+
+\bibitem[Zhang \& Yan(2022)Zhang and Yan]{zhang2022crossformer}
+Zhang, Y. and Yan, J.
+\newblock Crossformer: Transformer utilizing cross-dimension dependency for multivariate time series forecasting.
+\newblock In \emph{The Eleventh International Conference on Learning Representations}, 2022.
+
+\bibitem[Zhang et~al.(2023)Zhang, Long, Chen, Xing, Jin, Jordan, and Wang]{zhang2023skilful}
+Zhang, Y., Long, M., Chen, K., Xing, L., Jin, R., Jordan, M.~I., and Wang, J.
+\newblock Skilful nowcasting of extreme precipitation with nowcastnet.
+\newblock \emph{Nature}, 619\penalty0 (7970):\penalty0 526--532, 2023.
+
+\bibitem[Zhou et~al.(2021)Zhou, Zhang, Peng, Zhang, Li, Xiong, and Zhang]{zhou2021informer}
+Zhou, H., Zhang, S., Peng, J., Zhang, S., Li, J., Xiong, H., and Zhang, W.
+\newblock Informer: Beyond efficient transformer for long sequence time-series forecasting.
+\newblock In \emph{Proceedings of the AAAI conference on artificial intelligence}, volume~35, pp.\  11106--11115, 2021.
+
+\bibitem[Zhou et~al.(2022)Zhou, Ma, Wen, Wang, Sun, and Jin]{zhou2022fedformer}
+Zhou, T., Ma, Z., Wen, Q., Wang, X., Sun, L., and Jin, R.
+\newblock Fedformer: Frequency enhanced decomposed transformer for long-term series forecasting.
+\newblock In \emph{International Conference on Machine Learning}, pp.\  27268--27286. PMLR, 2022.
+
+\end{thebibliography}
