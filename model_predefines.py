@@ -1,9 +1,10 @@
-# %%
+# %% imports
 
 from math import sqrt
 
 import torch
 import torch.nn as nn
+from torch.utils.data import DataLoader
 
 from transformers import LlamaConfig, LlamaModel, LlamaTokenizer, GPT2Config, GPT2Model, GPT2Tokenizer, BertConfig, \
     BertModel, BertTokenizer
@@ -12,12 +13,12 @@ from time_llm.layers.Embed import PatchEmbedding
 from time_llm.layers.StandardNorm import Normalize
 
 
-# %%
+# %% log level
 
 transformers.logging.set_verbosity_error()
 
 
-# %%
+# %% flatten head
 
 class FlattenHead(nn.Module):
     def __init__(self, n_vars, nf, target_window, head_dropout=0):
@@ -34,7 +35,7 @@ class FlattenHead(nn.Module):
         return x
 
 
-# %%
+# %% reprogramming layer
 
 class ReprogrammingLayer(nn.Module):
     def __init__(self, d_model, n_heads, d_keys=None, d_llm=None, attention_dropout=0.1):
@@ -81,8 +82,7 @@ class ReprogrammingLayer(nn.Module):
         return reprogramming_embedding
 
 
-# %%
-
+# %% model
 
 class Model(nn.Module):
 
@@ -252,3 +252,43 @@ class Model(nn.Module):
         mean_value = torch.mean(corr, dim=1)
         _, lags = torch.topk(mean_value, self.top_k, dim=-1)
         return lags
+
+# %% data loader
+
+def data_provider(args, data, data_path, pretrain=True, flag='train'):
+    Data = data #TODO FIX DATA LOADER
+    timeenc = 0 if args.embed != 'timeF' else 1
+    percent = args.percent
+
+    if flag == 'test':
+        shuffle_flag = False
+        drop_last = True
+        batch_size = args.batch_size
+        freq = args.freq
+    else:
+        shuffle_flag = True
+        drop_last = True
+        batch_size = args.batch_size
+        freq = args.freq
+
+    data_set = Data(
+        root_path=args.root_path,
+        data_path=data_path,
+        flag=flag,
+        size=[args.seq_len, args.label_len, args.pred_len],
+        features=args.features,
+        target=args.target,
+        timeenc=timeenc,
+        freq=freq,
+        percent=percent,
+        seasonal_patterns=args.seasonal_patterns,
+        pretrain=pretrain
+    )
+    data_loader = DataLoader(
+        data_set,
+        batch_size=batch_size,
+        shuffle=shuffle_flag,
+        num_workers=args.num_workers,
+        drop_last=drop_last)
+    return data_set, data_loader
+
