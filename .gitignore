@@ -1,2 +1,4 @@
 checkpoints
 time_llm
+*.DS_STORE
+
