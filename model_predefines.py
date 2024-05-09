@@ -255,8 +255,7 @@ class Model(nn.Module):
 
 # %% data loader
 
-def data_provider(args, data, data_path, pretrain=True, flag='train'):
-    Data = data #TODO FIX DATA LOADER
+def data_provider(args, data_loader, data_path, pretrain=True, flag='train'):
     timeenc = 0 if args.embed != 'timeF' else 1
     percent = args.percent
 
@@ -271,7 +270,7 @@ def data_provider(args, data, data_path, pretrain=True, flag='train'):
         batch_size = args.batch_size
         freq = args.freq
 
-    data_set = Data(
+    data_set = data_loader(
         root_path=args.root_path,
         data_path=data_path,
         flag=flag,
@@ -284,7 +283,7 @@ def data_provider(args, data, data_path, pretrain=True, flag='train'):
         seasonal_patterns=args.seasonal_patterns,
         pretrain=pretrain
     )
-    data_loader = DataLoader(
+    data_loader = data_loader(
         data_set,
         batch_size=batch_size,
         shuffle=shuffle_flag,
